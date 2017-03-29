@@ -20,4 +20,10 @@ app.get('/api/all-transactions', (req, res) => {
   res.json({ data: DATA.transactions });
 });
 
+
+
+app.get('/api/all-employees', (req, res) => {
+  res.json({ data: DATA.employees });
+});
+
 app.listen(3000, () => console.log('App listening on port 3000'));
