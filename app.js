@@ -11,8 +11,13 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get('/api/all-users', (req, res) => {
-  console.log('requesting users');
   res.json({ data: DATA.users });
+});
+
+
+
+app.get('/api/all-transactions', (req, res) => {
+  res.json({ data: DATA.transactions });
 });
 
 app.listen(3000, () => console.log('App listening on port 3000'));
