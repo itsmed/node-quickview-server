@@ -1,6 +1,6 @@
 const EMPLOYEES = [
   {
-    "_id": "58d5809697c7c1a23244f8a4",
+    "id": "58d5809697c7c1a23244f8a4",
     "index": 0,
     "guid": "1cd97bf6-44af-41a6-9294-a9651106e40a",
     "name": {
@@ -14,7 +14,7 @@ const EMPLOYEES = [
     "full_name": "Kimberley Malone"
   },
   {
-    "_id": "58d580966ddd39eb026966f7",
+    "id": "58d580966ddd39eb026966f7",
     "index": 1,
     "guid": "0b2b6f25-2cc8-4c62-9220-5779b262f020",
     "name": {
@@ -28,7 +28,7 @@ const EMPLOYEES = [
     "full_name": "Patel Higgins"
   },
   {
-    "_id": "58d58096c14d9d3a482f7e87",
+    "id": "58d58096c14d9d3a482f7e87",
     "index": 2,
     "guid": "bce8ace0-aee1-41da-afe2-c37d6f42d215",
     "name": {
@@ -42,7 +42,7 @@ const EMPLOYEES = [
     "full_name": "Mcpherson Fulton"
   },
   {
-    "_id": "58d58096b5f2ee9a84b2f78a",
+    "id": "58d58096b5f2ee9a84b2f78a",
     "index": 3,
     "guid": "ea4c26c8-dddf-480e-a102-a066edc809b7",
     "name": {
@@ -56,7 +56,7 @@ const EMPLOYEES = [
     "full_name": "Jami Banks"
   },
   {
-    "_id": "58d580962910c70a73604106",
+    "id": "58d580962910c70a73604106",
     "index": 4,
     "guid": "d331b3f0-acd8-4d31-a70d-570a0aa12c80",
     "name": {
@@ -70,7 +70,7 @@ const EMPLOYEES = [
     "full_name": "Graciela Zimmerman"
   },
   {
-    "_id": "58d5809631389c5327d2659c",
+    "id": "58d5809631389c5327d2659c",
     "index": 5,
     "guid": "2325d3be-ad05-458b-b55c-e5ba5f4c975c",
     "name": {
@@ -84,7 +84,7 @@ const EMPLOYEES = [
     "full_name": "Keri Golden"
   },
   {
-    "_id": "58d5809628810c9eef817438",
+    "id": "58d5809628810c9eef817438",
     "index": 6,
     "guid": "970ed34e-97a9-4821-91dd-0e97b315bc7c",
     "name": {
@@ -98,7 +98,7 @@ const EMPLOYEES = [
     "full_name": "Lynnette Hines"
   },
   {
-    "_id": "58d580969abad6c6b1cad867",
+    "id": "58d580969abad6c6b1cad867",
     "index": 7,
     "guid": "1ea6c2ae-3568-4f4e-b041-b17474e682e1",
     "name": {
@@ -112,7 +112,7 @@ const EMPLOYEES = [
     "full_name": "Mullen Bonner"
   },
   {
-    "_id": "58d5809605f5f2df44916f0b",
+    "id": "58d5809605f5f2df44916f0b",
     "index": 8,
     "guid": "07199cb8-36a8-4674-ab0c-b32fcf9e084d",
     "name": {
@@ -126,7 +126,7 @@ const EMPLOYEES = [
     "full_name": "Louisa Henderson"
   },
   {
-    "_id": "58d5809664766d9644571f28",
+    "id": "58d5809664766d9644571f28",
     "index": 9,
     "guid": "da0c0915-3bbd-438c-b623-4d6955e5c244",
     "name": {
@@ -140,7 +140,7 @@ const EMPLOYEES = [
     "full_name": "Edith Gay"
   },
   {
-    "_id": "58d58096aa84710bb7df16e0",
+    "id": "58d58096aa84710bb7df16e0",
     "index": 10,
     "guid": "3ba4e545-ac34-48ae-b2e6-1fd6e59ace6e",
     "name": {
@@ -154,7 +154,7 @@ const EMPLOYEES = [
     "full_name": "Puckett Meadows"
   },
   {
-    "_id": "58d58096a9b30767aa89d5da",
+    "id": "58d58096a9b30767aa89d5da",
     "index": 11,
     "guid": "d73e5871-95e9-4240-9980-2a8ca90ffe33",
     "name": {
@@ -168,7 +168,7 @@ const EMPLOYEES = [
     "full_name": "Harvey Cardenas"
   },
   {
-    "_id": "58d58096655d5b16de377bc8",
+    "id": "58d58096655d5b16de377bc8",
     "index": 12,
     "guid": "535e7271-715c-4b1f-a4fd-558e902a1ce3",
     "name": {
@@ -182,7 +182,7 @@ const EMPLOYEES = [
     "full_name": "Marva Nixon"
   },
   {
-    "_id": "58d58096f0ea4f1b594e24ee",
+    "id": "58d58096f0ea4f1b594e24ee",
     "index": 13,
     "guid": "378b05c3-c959-45fd-8823-a5ef69894b45",
     "name": {
@@ -196,7 +196,7 @@ const EMPLOYEES = [
     "full_name": "George Wilder"
   },
   {
-    "_id": "58d58096fa9ed2d87cd3d193",
+    "id": "58d58096fa9ed2d87cd3d193",
     "index": 14,
     "guid": "1910c917-9336-4a4e-a1ca-07f1d52cba1d",
     "name": {
@@ -210,7 +210,7 @@ const EMPLOYEES = [
     "full_name": "Blanche Wynn"
   },
   {
-    "_id": "58d5809612bcc6048d215c99",
+    "id": "58d5809612bcc6048d215c99",
     "index": 15,
     "guid": "f70b6d8e-3c59-486f-9171-6caddf922b5a",
     "name": {
@@ -224,7 +224,7 @@ const EMPLOYEES = [
     "full_name": "Sally Martin"
   },
   {
-    "_id": "58d5809651ec65d0fb2751ca",
+    "id": "58d5809651ec65d0fb2751ca",
     "index": 16,
     "guid": "cfe85596-0e00-4818-b5e2-d36a52c032f3",
     "name": {
@@ -238,7 +238,7 @@ const EMPLOYEES = [
     "full_name": "Donovan Mckay"
   },
   {
-    "_id": "58d58096ba66a93aa3bb774d",
+    "id": "58d58096ba66a93aa3bb774d",
     "index": 17,
     "guid": "a937fa69-70c1-43af-bc07-9efaff48017c",
     "name": {
@@ -252,7 +252,7 @@ const EMPLOYEES = [
     "full_name": "Hallie Hutchinson"
   },
   {
-    "_id": "58d580960a1383a0afd9aabf",
+    "id": "58d580960a1383a0afd9aabf",
     "index": 18,
     "guid": "ac54f67e-0793-4bf6-ad1e-7e1008c4eca7",
     "name": {
@@ -270,7 +270,7 @@ const EMPLOYEES = [
 
 const USERS = [
   {
-    "_id": "58d58096f432e6cf006a53db",
+    "id": "58d58096f432e6cf006a53db",
     "index": 0,
     "guid": "3d1c1436-e09a-4b62-b2ee-5f1aebf20d88",
     "isActive": false,
@@ -289,7 +289,7 @@ const USERS = [
     "full_name": "Melendez Randolph"
   },
   {
-    "_id": "58d58096f4af008ba5c929a6",
+    "id": "58d58096f4af008ba5c929a6",
     "index": 1,
     "guid": "f1030b3b-14e3-426e-8fc2-387706982ac7",
     "isActive": false,
@@ -308,7 +308,7 @@ const USERS = [
     "full_name": "Justine Castro"
   },
   {
-    "_id": "58d5809637218f902b49bf98",
+    "id": "58d5809637218f902b49bf98",
     "index": 2,
     "guid": "22966b24-7a04-40d9-94b0-f7e8acb2ac5d",
     "isActive": true,
@@ -327,7 +327,7 @@ const USERS = [
     "full_name": "Shanna Stuart"
   },
   {
-    "_id": "58d58096fc52ea6f92be1b14",
+    "id": "58d58096fc52ea6f92be1b14",
     "index": 3,
     "guid": "bb5c62e5-0550-41e6-b06e-9a9b61d5cff5",
     "isActive": true,
@@ -346,7 +346,7 @@ const USERS = [
     "full_name": "Wooten Haynes"
   },
   {
-    "_id": "58d58096cf7b5998138c5ccd",
+    "id": "58d58096cf7b5998138c5ccd",
     "index": 4,
     "guid": "bb260cb8-2485-4931-bc85-b3b02cca94cb",
     "isActive": false,
@@ -365,7 +365,7 @@ const USERS = [
     "full_name": "Curtis Fisher"
   },
   {
-    "_id": "58d58096aaf1e4119144f41f",
+    "id": "58d58096aaf1e4119144f41f",
     "index": 5,
     "guid": "78274210-078a-4766-8ed3-5446655c1cd4",
     "isActive": true,
@@ -384,7 +384,7 @@ const USERS = [
     "full_name": "Rita Patton"
   },
   {
-    "_id": "58d580967778ae4fe34abb11",
+    "id": "58d580967778ae4fe34abb11",
     "index": 6,
     "guid": "91ac10ab-e888-4f3a-8845-9481f0a286b8",
     "isActive": false,
@@ -403,7 +403,7 @@ const USERS = [
     "full_name": "Yvonne Murray"
   },
   {
-    "_id": "58d58096db7fd098f3865631",
+    "id": "58d58096db7fd098f3865631",
     "index": 7,
     "guid": "77728e89-5d06-47f8-a3c8-cfaf4e747964",
     "isActive": false,
@@ -422,7 +422,7 @@ const USERS = [
     "full_name": "Earlene Hebert"
   },
   {
-    "_id": "58d5809693509946c0758d9e",
+    "id": "58d5809693509946c0758d9e",
     "index": 8,
     "guid": "ee669cef-5f89-4f1a-b479-f9011d971963",
     "isActive": false,
@@ -441,7 +441,7 @@ const USERS = [
     "full_name": "Candice Mercado"
   },
   {
-    "_id": "58d580962431a01fb499b96b",
+    "id": "58d580962431a01fb499b96b",
     "index": 9,
     "guid": "4a4d5159-c01b-4082-8047-2fc1fd3296b0",
     "isActive": false,
@@ -460,7 +460,7 @@ const USERS = [
     "full_name": "Guadalupe Brooks"
   },
   {
-    "_id": "58d5809679742c03fd534386",
+    "id": "58d5809679742c03fd534386",
     "index": 10,
     "guid": "6f3b636f-283d-4ca9-bb30-8fd225f3793c",
     "isActive": true,
@@ -479,7 +479,7 @@ const USERS = [
     "full_name": "Paul Stout"
   },
   {
-    "_id": "58d58096c18452c3714d64db",
+    "id": "58d58096c18452c3714d64db",
     "index": 11,
     "guid": "11d1cc68-a5b5-4901-ae21-1507f1f0f890",
     "isActive": false,
@@ -498,7 +498,7 @@ const USERS = [
     "full_name": "Mabel Mcleod"
   },
   {
-    "_id": "58d58096d2cdbd80e798ca75",
+    "id": "58d58096d2cdbd80e798ca75",
     "index": 12,
     "guid": "b736a830-7450-4c4a-987d-3eed8d959829",
     "isActive": false,
@@ -517,7 +517,7 @@ const USERS = [
     "full_name": "Alfreda Bolton"
   },
   {
-    "_id": "58d58096eb779004f7374241",
+    "id": "58d58096eb779004f7374241",
     "index": 13,
     "guid": "d1a30f02-0ac3-4a7b-bf83-8a6ce348351a",
     "isActive": true,
@@ -536,7 +536,7 @@ const USERS = [
     "full_name": "Jan Sparks"
   },
   {
-    "_id": "58d5809663953035ab508624",
+    "id": "58d5809663953035ab508624",
     "index": 14,
     "guid": "880c76ea-4c58-4656-a587-dc33a2a3d9a1",
     "isActive": true,
@@ -555,7 +555,7 @@ const USERS = [
     "full_name": "Cindy Hester"
   },
   {
-    "_id": "58d58096dc3d52364c48307c",
+    "id": "58d58096dc3d52364c48307c",
     "index": 15,
     "guid": "b3cd7c9e-8b20-4332-b484-1f11f69fde90",
     "isActive": true,
@@ -574,7 +574,7 @@ const USERS = [
     "full_name": "Alisa Solis"
   },
   {
-    "_id": "58d580964a2acf9ce46b7cd2",
+    "id": "58d580964a2acf9ce46b7cd2",
     "index": 16,
     "guid": "8dc779c2-61d0-48df-91e9-ae1e85144362",
     "isActive": true,
@@ -593,7 +593,7 @@ const USERS = [
     "full_name": "Duffy Castillo"
   },
   {
-    "_id": "58d580960a7d83fec3f5db6b",
+    "id": "58d580960a7d83fec3f5db6b",
     "index": 17,
     "guid": "bd4efd2d-6d99-4748-8ff7-f0eff2ee6b10",
     "isActive": false,
@@ -612,7 +612,7 @@ const USERS = [
     "full_name": "Riley Dunlap"
   },
   {
-    "_id": "58d580964dd833e0948b2754",
+    "id": "58d580964dd833e0948b2754",
     "index": 18,
     "guid": "233eae7d-ce19-42ec-badb-b37dab917df8",
     "isActive": false,
@@ -631,7 +631,7 @@ const USERS = [
     "full_name": "Finley Harding"
   },
   {
-    "_id": "58d58096cda57da7aa838d21",
+    "id": "58d58096cda57da7aa838d21",
     "index": 19,
     "guid": "c5a95239-c88a-4eeb-a91a-e8caded3b764",
     "isActive": true,
@@ -650,7 +650,7 @@ const USERS = [
     "full_name": "Opal Fletcher"
   },
   {
-    "_id": "58d580969682bbaabdb0719b",
+    "id": "58d580969682bbaabdb0719b",
     "index": 20,
     "guid": "1ebbc73d-4e9a-4eca-a94d-226af89cf2c5",
     "isActive": true,
@@ -669,7 +669,7 @@ const USERS = [
     "full_name": "Lynn Leon"
   },
   {
-    "_id": "58d58096bde234d2bba990a7",
+    "id": "58d58096bde234d2bba990a7",
     "index": 21,
     "guid": "9e46fc7b-8f93-434c-92b3-66cb7b46a4a7",
     "isActive": false,
@@ -688,7 +688,7 @@ const USERS = [
     "full_name": "Workman Crosby"
   },
   {
-    "_id": "58d580965b7d5c0d40383098",
+    "id": "58d580965b7d5c0d40383098",
     "index": 22,
     "guid": "86d542ea-5f1d-4295-aa18-f45cf7eb0842",
     "isActive": true,
@@ -707,7 +707,7 @@ const USERS = [
     "full_name": "Mccray Blanchard"
   },
   {
-    "_id": "58d58096211ed683425f3ac5",
+    "id": "58d58096211ed683425f3ac5",
     "index": 23,
     "guid": "e7532240-6a64-4aa5-987c-c27e80089916",
     "isActive": true,
@@ -726,7 +726,7 @@ const USERS = [
     "full_name": "Mae Rosales"
   },
   {
-    "_id": "58d58096c741a425d83ed280",
+    "id": "58d58096c741a425d83ed280",
     "index": 24,
     "guid": "72d9b79f-dad9-40b9-b771-0c13d0d7202f",
     "isActive": true,
@@ -745,7 +745,7 @@ const USERS = [
     "full_name": "Sherman Bean"
   },
   {
-    "_id": "58d580967f145562ffe95273",
+    "id": "58d580967f145562ffe95273",
     "index": 25,
     "guid": "aaeecd40-ed59-4ea8-97ec-789e84778da8",
     "isActive": false,
@@ -764,7 +764,7 @@ const USERS = [
     "full_name": "Bertha David"
   },
   {
-    "_id": "58d58096213fefca19b62c28",
+    "id": "58d58096213fefca19b62c28",
     "index": 26,
     "guid": "1b974e74-ee95-410f-97de-85b4a6031e77",
     "isActive": true,
@@ -783,7 +783,7 @@ const USERS = [
     "full_name": "Verna Holder"
   },
   {
-    "_id": "58d5809654aa0819a4d01cf5",
+    "id": "58d5809654aa0819a4d01cf5",
     "index": 27,
     "guid": "f6deef73-9a68-4068-8079-c69819752730",
     "isActive": true,
@@ -802,7 +802,7 @@ const USERS = [
     "full_name": "Gomez Ochoa"
   },
   {
-    "_id": "58d58096dc47cb96c2247470",
+    "id": "58d58096dc47cb96c2247470",
     "index": 28,
     "guid": "b95db5d3-ff2e-4c1b-82e6-12db8d48a4e1",
     "isActive": true,
@@ -821,7 +821,7 @@ const USERS = [
     "full_name": "Rollins Mcmillan"
   },
   {
-    "_id": "58d58096256e483da31d4191",
+    "id": "58d58096256e483da31d4191",
     "index": 29,
     "guid": "a1734b88-f4d8-4877-9749-f0d26872e5f2",
     "isActive": false,
@@ -840,7 +840,7 @@ const USERS = [
     "full_name": "Amber Flynn"
   },
   {
-    "_id": "58d58096fa08cdab0310651e",
+    "id": "58d58096fa08cdab0310651e",
     "index": 30,
     "guid": "88c22133-d4df-4cd6-adce-4194fc76ea25",
     "isActive": true,
@@ -859,7 +859,7 @@ const USERS = [
     "full_name": "Gould Buchanan"
   },
   {
-    "_id": "58d58096229b0a0915e56a96",
+    "id": "58d58096229b0a0915e56a96",
     "index": 31,
     "guid": "981dfc56-fce2-4e20-a159-0dc8d6dfae28",
     "isActive": false,
@@ -878,7 +878,7 @@ const USERS = [
     "full_name": "Concetta Waller"
   },
   {
-    "_id": "58d580968ddb59069d933fc7",
+    "id": "58d580968ddb59069d933fc7",
     "index": 32,
     "guid": "05f808ce-b1ff-4760-9b85-73d74908cb4d",
     "isActive": true,
@@ -897,7 +897,7 @@ const USERS = [
     "full_name": "Carmella Mcgowan"
   },
   {
-    "_id": "58d580969b32bae2d115a907",
+    "id": "58d580969b32bae2d115a907",
     "index": 33,
     "guid": "d3d1b1c3-aafc-492a-b6d8-47d857893417",
     "isActive": false,
@@ -916,7 +916,7 @@ const USERS = [
     "full_name": "Arnold Osborn"
   },
   {
-    "_id": "58d58096f1b36b1d91f0c612",
+    "id": "58d58096f1b36b1d91f0c612",
     "index": 34,
     "guid": "34f0647c-7966-46e3-92bd-c85e97d39967",
     "isActive": false,
@@ -935,7 +935,7 @@ const USERS = [
     "full_name": "Kemp Barron"
   },
   {
-    "_id": "58d5809647a37dd08638b80e",
+    "id": "58d5809647a37dd08638b80e",
     "index": 35,
     "guid": "342e8cca-4d1f-430d-93c2-b8c5efbe0101",
     "isActive": false,
@@ -954,7 +954,7 @@ const USERS = [
     "full_name": "Mcknight Vinson"
   },
   {
-    "_id": "58d580966333da709f04d79e",
+    "id": "58d580966333da709f04d79e",
     "index": 36,
     "guid": "8070f0f5-3aa1-4f38-9500-36dd1b876f53",
     "isActive": true,
@@ -973,7 +973,7 @@ const USERS = [
     "full_name": "Manuela Shields"
   },
   {
-    "_id": "58d580961d223540339567b9",
+    "id": "58d580961d223540339567b9",
     "index": 37,
     "guid": "ad911244-90b8-4cb0-860b-de873086ec7c",
     "isActive": true,
@@ -992,7 +992,7 @@ const USERS = [
     "full_name": "Latasha Molina"
   },
   {
-    "_id": "58d5809612b3da3095ecaef7",
+    "id": "58d5809612b3da3095ecaef7",
     "index": 38,
     "guid": "ca6d503d-a134-4ef6-bf27-23f2e8f0a226",
     "isActive": true,
@@ -1011,7 +1011,7 @@ const USERS = [
     "full_name": "Joyce Harris"
   },
   {
-    "_id": "58d580968982d7514c3585eb",
+    "id": "58d580968982d7514c3585eb",
     "index": 39,
     "guid": "a31b2617-5d89-4be6-ba43-1c1ba157caa3",
     "isActive": true,
@@ -1030,7 +1030,7 @@ const USERS = [
     "full_name": "Grant Burnett"
   },
   {
-    "_id": "58d58096469bfca0cd205af0",
+    "id": "58d58096469bfca0cd205af0",
     "index": 40,
     "guid": "2b17c4d7-4d02-4762-ba03-48b2b496d237",
     "isActive": true,
@@ -1049,7 +1049,7 @@ const USERS = [
     "full_name": "Hooper Gentry"
   },
   {
-    "_id": "58d580962e085904473a5d6c",
+    "id": "58d580962e085904473a5d6c",
     "index": 41,
     "guid": "eccae108-dfa9-40a9-ac91-5ae12c799bf9",
     "isActive": true,
@@ -1068,7 +1068,7 @@ const USERS = [
     "full_name": "Lela Rosa"
   },
   {
-    "_id": "58d58096125d25afbf923508",
+    "id": "58d58096125d25afbf923508",
     "index": 42,
     "guid": "515cef6a-d859-4ec9-a8b3-76dc7cb53856",
     "isActive": true,
@@ -1087,7 +1087,7 @@ const USERS = [
     "full_name": "Gibson Freeman"
   },
   {
-    "_id": "58d58096f205d15f57072d59",
+    "id": "58d58096f205d15f57072d59",
     "index": 43,
     "guid": "9b00afad-7c71-4afa-9e03-909ea5c86f60",
     "isActive": true,
@@ -1106,7 +1106,7 @@ const USERS = [
     "full_name": "Petersen Sexton"
   },
   {
-    "_id": "58d58096743c87dfdea1d576",
+    "id": "58d58096743c87dfdea1d576",
     "index": 44,
     "guid": "edbdabaf-9295-4ba2-9f7c-13fe8efa4bba",
     "isActive": true,
@@ -1125,7 +1125,7 @@ const USERS = [
     "full_name": "Dixon Caldwell"
   },
   {
-    "_id": "58d5809657a8cc34ac4fed9f",
+    "id": "58d5809657a8cc34ac4fed9f",
     "index": 45,
     "guid": "7a4b2fbb-9b6d-43b0-b4b0-29843956b598",
     "isActive": true,
@@ -1144,7 +1144,7 @@ const USERS = [
     "full_name": "Brown Tyson"
   },
   {
-    "_id": "58d58096f502a4e177e30793",
+    "id": "58d58096f502a4e177e30793",
     "index": 46,
     "guid": "043da273-e0e5-4749-aeaf-861f0c953eca",
     "isActive": false,
@@ -1163,7 +1163,7 @@ const USERS = [
     "full_name": "Augusta Hess"
   },
   {
-    "_id": "58d58096085dd0c26a92fa4e",
+    "id": "58d58096085dd0c26a92fa4e",
     "index": 47,
     "guid": "b5f7cd72-7d63-4e5f-bb47-44104b3ea39b",
     "isActive": true,
@@ -1182,7 +1182,7 @@ const USERS = [
     "full_name": "Knox Diaz"
   },
   {
-    "_id": "58d58096bceb2e209e3efb30",
+    "id": "58d58096bceb2e209e3efb30",
     "index": 48,
     "guid": "7a4e672a-aab6-42d1-81fe-472e8ff809bf",
     "isActive": false,
@@ -1201,7 +1201,7 @@ const USERS = [
     "full_name": "Patricia Suarez"
   },
   {
-    "_id": "58d580961e696767a57e49a1",
+    "id": "58d580961e696767a57e49a1",
     "index": 49,
     "guid": "d9568f32-c242-44d1-bba3-f6ebc97c0708",
     "isActive": true,
@@ -1220,7 +1220,7 @@ const USERS = [
     "full_name": "Velez Mcclure"
   },
   {
-    "_id": "58d58096bb0ac9e5b204c12e",
+    "id": "58d58096bb0ac9e5b204c12e",
     "index": 50,
     "guid": "1548959c-fd70-4a06-a9bb-6ca08915bbf3",
     "isActive": false,
@@ -1239,7 +1239,7 @@ const USERS = [
     "full_name": "Lyons Reilly"
   },
   {
-    "_id": "58d580968fbfd64a721e9882",
+    "id": "58d580968fbfd64a721e9882",
     "index": 51,
     "guid": "42fc91ca-0f94-45b8-accf-793ab63bcd08",
     "isActive": true,
@@ -1258,7 +1258,7 @@ const USERS = [
     "full_name": "Holmes Reynolds"
   },
   {
-    "_id": "58d580961b8ba4c21ada239b",
+    "id": "58d580961b8ba4c21ada239b",
     "index": 52,
     "guid": "568aece7-0f89-4b56-87c1-574f26a00b17",
     "isActive": false,
@@ -1277,7 +1277,7 @@ const USERS = [
     "full_name": "Kaye Wells"
   },
   {
-    "_id": "58d5809668744f9184019804",
+    "id": "58d5809668744f9184019804",
     "index": 53,
     "guid": "7a84cece-cdaa-4dc1-9d68-d5ba84f6b0e1",
     "isActive": true,
@@ -1296,7 +1296,7 @@ const USERS = [
     "full_name": "Rhoda Phillips"
   },
   {
-    "_id": "58d58096c48c49feb719a7e1",
+    "id": "58d58096c48c49feb719a7e1",
     "index": 54,
     "guid": "aa91a002-1ca8-490a-a180-6ccbb29dfb08",
     "isActive": false,
@@ -1315,7 +1315,7 @@ const USERS = [
     "full_name": "House Cooley"
   },
   {
-    "_id": "58d58096c135c80cff95815f",
+    "id": "58d58096c135c80cff95815f",
     "index": 55,
     "guid": "bc1245bb-df96-4e2c-891a-38b033b06646",
     "isActive": true,
@@ -1334,7 +1334,7 @@ const USERS = [
     "full_name": "Francesca Le"
   },
   {
-    "_id": "58d58096dfa08e8fbc4c135f",
+    "id": "58d58096dfa08e8fbc4c135f",
     "index": 56,
     "guid": "81b632d3-4c46-4705-88c1-e0c98cb90be3",
     "isActive": true,
@@ -1353,7 +1353,7 @@ const USERS = [
     "full_name": "Jacqueline Lindsay"
   },
   {
-    "_id": "58d58096120333474edc7bc3",
+    "id": "58d58096120333474edc7bc3",
     "index": 57,
     "guid": "805fb424-8502-4e0c-8855-9b765eac3345",
     "isActive": false,
@@ -1372,7 +1372,7 @@ const USERS = [
     "full_name": "Rosario Gallagher"
   },
   {
-    "_id": "58d58096d952b9dcc2054310",
+    "id": "58d58096d952b9dcc2054310",
     "index": 58,
     "guid": "55cb5d04-53ab-41f6-a20b-fce323ef9c05",
     "isActive": true,
@@ -1391,7 +1391,7 @@ const USERS = [
     "full_name": "Trudy Leblanc"
   },
   {
-    "_id": "58d580964047f87558e65fc1",
+    "id": "58d580964047f87558e65fc1",
     "index": 59,
     "guid": "b3158526-a6a1-4b92-82f3-76c944d76e08",
     "isActive": true,
@@ -1410,7 +1410,7 @@ const USERS = [
     "full_name": "Connie Macias"
   },
   {
-    "_id": "58d58096544011657d73f0dc",
+    "id": "58d58096544011657d73f0dc",
     "index": 60,
     "guid": "4322a221-5a2a-48e3-aafa-fdf6c17f55f9",
     "isActive": true,
@@ -1429,7 +1429,7 @@ const USERS = [
     "full_name": "Rochelle Joyce"
   },
   {
-    "_id": "58d58096610d2ae0b9748e81",
+    "id": "58d58096610d2ae0b9748e81",
     "index": 61,
     "guid": "f5c57277-a881-448e-a6c8-b6a6fc83535a",
     "isActive": false,
@@ -1448,7 +1448,7 @@ const USERS = [
     "full_name": "Juarez Medina"
   },
   {
-    "_id": "58d580962dce7e8ba9d3157e",
+    "id": "58d580962dce7e8ba9d3157e",
     "index": 62,
     "guid": "80e47019-14c9-48d9-beb7-c3ba2e6abead",
     "isActive": true,
@@ -1467,7 +1467,7 @@ const USERS = [
     "full_name": "Lara Callahan"
   },
   {
-    "_id": "58d58096a273c1f9b59a8a08",
+    "id": "58d58096a273c1f9b59a8a08",
     "index": 63,
     "guid": "dad4c203-c34e-4e64-a40e-1965f6bbec07",
     "isActive": true,
@@ -1486,7 +1486,7 @@ const USERS = [
     "full_name": "Snyder Sutton"
   },
   {
-    "_id": "58d580961f426616017199b0",
+    "id": "58d580961f426616017199b0",
     "index": 64,
     "guid": "f4064430-4dac-4db3-871d-735226b4a54a",
     "isActive": true,
@@ -1505,7 +1505,7 @@ const USERS = [
     "full_name": "Rosa Pearson"
   },
   {
-    "_id": "58d58096b44a13e78962a9a6",
+    "id": "58d58096b44a13e78962a9a6",
     "index": 65,
     "guid": "7a7cd47e-b3bd-42e7-816f-3df36752bf97",
     "isActive": false,
@@ -1526,7 +1526,7 @@ const USERS = [
 ];
 const TRANSACTIONS = [
   {
-    "_id": "58d58096cb15a01bf65c39d2",
+    "id": "58d58096cb15a01bf65c39d2",
     "index": 0,
     "guid": "0b659589-ee00-44d0-9e97-90e9625345c7",
     "amount": "$232.94",
@@ -1534,7 +1534,7 @@ const TRANSACTIONS = [
     "date": "2011-06-12T04:09:18.860Z"
   },
   {
-    "_id": "58d58096ef7a474334cb33ab",
+    "id": "58d58096ef7a474334cb33ab",
     "index": 1,
     "guid": "8020b638-e65b-49e9-8880-9109dc65a6fa",
     "amount": "$509.55",
@@ -1542,7 +1542,7 @@ const TRANSACTIONS = [
     "date": "1972-06-05T18:13:57.547Z"
   },
   {
-    "_id": "58d58096ee9da8c0316f6832",
+    "id": "58d58096ee9da8c0316f6832",
     "index": 2,
     "guid": "e8ff09e0-cafd-4514-ad10-a2b6455d4b03",
     "amount": "$970.04",
@@ -1550,7 +1550,7 @@ const TRANSACTIONS = [
     "date": "2009-07-06T02:15:04.527Z"
   },
   {
-    "_id": "58d58096868ed5f49cf52b88",
+    "id": "58d58096868ed5f49cf52b88",
     "index": 3,
     "guid": "1b720e66-d5cb-4c61-a149-2089ad94b71d",
     "amount": "$2,868.88",
@@ -1558,7 +1558,7 @@ const TRANSACTIONS = [
     "date": "2010-02-28T02:05:13.997Z"
   },
   {
-    "_id": "58d58096f089781d09feb5d3",
+    "id": "58d58096f089781d09feb5d3",
     "index": 4,
     "guid": "bbf0edb0-169d-4379-8f85-26d7114eab65",
     "amount": "$215.16",
@@ -1566,7 +1566,7 @@ const TRANSACTIONS = [
     "date": "2010-08-30T21:46:44.478Z"
   },
   {
-    "_id": "58d580967521c299d954adc8",
+    "id": "58d580967521c299d954adc8",
     "index": 5,
     "guid": "948db4b6-fe47-4184-bfee-bc742e3478a4",
     "amount": "$2,404.99",
@@ -1574,7 +1574,7 @@ const TRANSACTIONS = [
     "date": "2014-04-02T20:09:30.008Z"
   },
   {
-    "_id": "58d580962999c69584d1f31d",
+    "id": "58d580962999c69584d1f31d",
     "index": 6,
     "guid": "b67bb4ea-5f88-4a8d-8297-53fbf2c7ba03",
     "amount": "$68.69",
@@ -1582,7 +1582,7 @@ const TRANSACTIONS = [
     "date": "2000-04-17T16:24:11.781Z"
   },
   {
-    "_id": "58d58096da48b9d6e9171c1f",
+    "id": "58d58096da48b9d6e9171c1f",
     "index": 7,
     "guid": "976795bb-0b02-485e-9d65-3169acd283e9",
     "amount": "$3,233.61",
@@ -1590,7 +1590,7 @@ const TRANSACTIONS = [
     "date": "1997-11-09T12:46:28.258Z"
   },
   {
-    "_id": "58d580960ceeab8485217437",
+    "id": "58d580960ceeab8485217437",
     "index": 8,
     "guid": "d7b00260-f4cb-4a78-91d4-349e0e36e808",
     "amount": "$2,724.88",
@@ -1598,7 +1598,7 @@ const TRANSACTIONS = [
     "date": "2007-12-17T19:18:44.868Z"
   },
   {
-    "_id": "58d5809670ae528a0d07f505",
+    "id": "58d5809670ae528a0d07f505",
     "index": 9,
     "guid": "661a6dd1-a130-4238-8c38-f28f8f778f48",
     "amount": "$3,049.58",
@@ -1606,7 +1606,7 @@ const TRANSACTIONS = [
     "date": "1981-12-09T00:56:21.961Z"
   },
   {
-    "_id": "58d5809663bc78d2945b4ede",
+    "id": "58d5809663bc78d2945b4ede",
     "index": 10,
     "guid": "063c59c5-4d89-47a3-a732-6abd85784422",
     "amount": "$1,815.22",
@@ -1614,7 +1614,7 @@ const TRANSACTIONS = [
     "date": "2013-03-29T03:37:53.580Z"
   },
   {
-    "_id": "58d580962834aaebb8ef733a",
+    "id": "58d580962834aaebb8ef733a",
     "index": 11,
     "guid": "20e74c83-795f-41ec-b0f7-e6518066f07c",
     "amount": "$326.42",
@@ -1622,7 +1622,7 @@ const TRANSACTIONS = [
     "date": "2002-09-15T21:26:37.977Z"
   },
   {
-    "_id": "58d5809645a9027914de772a",
+    "id": "58d5809645a9027914de772a",
     "index": 12,
     "guid": "945b2faa-b1a0-4aa5-af53-8eb0eaf43690",
     "amount": "$2,662.80",
@@ -1630,7 +1630,7 @@ const TRANSACTIONS = [
     "date": "1978-10-27T17:32:24.160Z"
   },
   {
-    "_id": "58d58096ea25497636abab91",
+    "id": "58d58096ea25497636abab91",
     "index": 13,
     "guid": "6a1b86c0-124d-4394-aeff-ee06981914ef",
     "amount": "$1,083.20",
@@ -1638,7 +1638,7 @@ const TRANSACTIONS = [
     "date": "1999-06-23T21:54:10.309Z"
   },
   {
-    "_id": "58d5809614bd65bbf9498352",
+    "id": "58d5809614bd65bbf9498352",
     "index": 14,
     "guid": "5c303baf-4eb7-4cb8-89ee-ed96bbbfb317",
     "amount": "$69.32",
@@ -1646,7 +1646,7 @@ const TRANSACTIONS = [
     "date": "1978-02-20T05:52:05.650Z"
   },
   {
-    "_id": "58d58096b6c07bf5aad47aae",
+    "id": "58d58096b6c07bf5aad47aae",
     "index": 15,
     "guid": "27f232be-eae1-4385-8076-cd25566bb541",
     "amount": "$3,751.59",
@@ -1654,7 +1654,7 @@ const TRANSACTIONS = [
     "date": "1981-02-26T12:06:59.935Z"
   },
   {
-    "_id": "58d5809624032690a229a431",
+    "id": "58d5809624032690a229a431",
     "index": 16,
     "guid": "699173b1-65bd-4879-bb20-72518e1b6c4b",
     "amount": "$3,721.69",
@@ -1662,7 +1662,7 @@ const TRANSACTIONS = [
     "date": "2008-10-16T15:51:19.622Z"
   },
   {
-    "_id": "58d58096642631ac0179bdb8",
+    "id": "58d58096642631ac0179bdb8",
     "index": 17,
     "guid": "28f2237c-b283-48a4-9707-e4dc05d28bfd",
     "amount": "$3,361.26",
@@ -1670,7 +1670,7 @@ const TRANSACTIONS = [
     "date": "1990-02-12T21:04:04.331Z"
   },
   {
-    "_id": "58d58096def2e780ab731d88",
+    "id": "58d58096def2e780ab731d88",
     "index": 18,
     "guid": "36897926-d8a6-4771-a03f-27efdb6860b8",
     "amount": "$1,746.34",
@@ -1678,7 +1678,7 @@ const TRANSACTIONS = [
     "date": "1996-10-10T14:11:11.153Z"
   },
   {
-    "_id": "58d58096e8da16d2b5dccfb1",
+    "id": "58d58096e8da16d2b5dccfb1",
     "index": 19,
     "guid": "2d3c18da-0744-44a2-808a-222add6f5e97",
     "amount": "$1,632.62",
@@ -1686,7 +1686,7 @@ const TRANSACTIONS = [
     "date": "1984-08-29T00:50:12.929Z"
   },
   {
-    "_id": "58d5809615afdec45fdd6447",
+    "id": "58d5809615afdec45fdd6447",
     "index": 20,
     "guid": "38455108-1066-4689-b45e-1426522ae5e1",
     "amount": "$501.38",
@@ -1694,7 +1694,7 @@ const TRANSACTIONS = [
     "date": "2011-01-12T05:17:45.425Z"
   },
   {
-    "_id": "58d580962751fa0a812a6868",
+    "id": "58d580962751fa0a812a6868",
     "index": 21,
     "guid": "301c3bd7-def3-4cda-8e55-872b9558169a",
     "amount": "$3,279.17",
@@ -1702,7 +1702,7 @@ const TRANSACTIONS = [
     "date": "1979-06-16T22:10:07.287Z"
   },
   {
-    "_id": "58d58096e99143db0923890a",
+    "id": "58d58096e99143db0923890a",
     "index": 22,
     "guid": "d00a2116-e996-40fb-9ea7-56b909464b8f",
     "amount": "$128.51",
@@ -1710,7 +1710,7 @@ const TRANSACTIONS = [
     "date": "2012-01-15T13:25:43.292Z"
   },
   {
-    "_id": "58d58096d3fe89127583fa2e",
+    "id": "58d58096d3fe89127583fa2e",
     "index": 23,
     "guid": "254ff3fe-8575-4c0d-8ceb-40c13b64bc9b",
     "amount": "$3,652.07",
@@ -1718,7 +1718,7 @@ const TRANSACTIONS = [
     "date": "1978-05-08T01:10:04.268Z"
   },
   {
-    "_id": "58d58096b0d4e7f0a2dff14d",
+    "id": "58d58096b0d4e7f0a2dff14d",
     "index": 24,
     "guid": "02a44247-7f00-4d68-9547-0d93f6e32ba6",
     "amount": "$1,955.00",
@@ -1726,7 +1726,7 @@ const TRANSACTIONS = [
     "date": "1978-11-12T13:08:22.581Z"
   },
   {
-    "_id": "58d5809666b0f6504d7fd791",
+    "id": "58d5809666b0f6504d7fd791",
     "index": 25,
     "guid": "f0dda4eb-cca3-4dc8-8fc3-d48e9f3365ed",
     "amount": "$3,872.52",
@@ -1734,7 +1734,7 @@ const TRANSACTIONS = [
     "date": "2015-01-12T02:58:50.017Z"
   },
   {
-    "_id": "58d580966a22e59822039e21",
+    "id": "58d580966a22e59822039e21",
     "index": 26,
     "guid": "46cdd55e-8628-4133-a530-042847e92ed8",
     "amount": "$1,102.92",
@@ -1742,7 +1742,7 @@ const TRANSACTIONS = [
     "date": "1980-03-28T14:12:39.298Z"
   },
   {
-    "_id": "58d580964411fe8d78493ecc",
+    "id": "58d580964411fe8d78493ecc",
     "index": 27,
     "guid": "ef9e63d7-f2f1-4bcf-a0ce-c4c365bd0c25",
     "amount": "$3,710.66",
@@ -1750,7 +1750,7 @@ const TRANSACTIONS = [
     "date": "1973-05-20T01:41:10.572Z"
   },
   {
-    "_id": "58d58096d45f1541cc474101",
+    "id": "58d58096d45f1541cc474101",
     "index": 28,
     "guid": "6f1715a3-0d88-449e-ac53-90370c7a06e9",
     "amount": "$3,444.01",
@@ -1758,7 +1758,7 @@ const TRANSACTIONS = [
     "date": "2010-07-13T19:04:59.515Z"
   },
   {
-    "_id": "58d58096a34ae66b6ebed138",
+    "id": "58d58096a34ae66b6ebed138",
     "index": 29,
     "guid": "da50d8b7-d825-4756-b303-3c122633eca0",
     "amount": "$406.47",
@@ -1766,7 +1766,7 @@ const TRANSACTIONS = [
     "date": "1991-01-19T03:41:00.273Z"
   },
   {
-    "_id": "58d58096bd2490b1986df756",
+    "id": "58d58096bd2490b1986df756",
     "index": 30,
     "guid": "af070418-7a43-4b4b-a3b3-457ebe3e416a",
     "amount": "$481.98",
@@ -1774,7 +1774,7 @@ const TRANSACTIONS = [
     "date": "2016-06-28T08:26:43.367Z"
   },
   {
-    "_id": "58d58096a30713f5d8204ec6",
+    "id": "58d58096a30713f5d8204ec6",
     "index": 31,
     "guid": "8e671e30-2054-406b-91ea-59852cdc6257",
     "amount": "$720.75",
@@ -1782,7 +1782,7 @@ const TRANSACTIONS = [
     "date": "2008-03-31T12:29:57.132Z"
   },
   {
-    "_id": "58d5809612b6224a7d94be38",
+    "id": "58d5809612b6224a7d94be38",
     "index": 32,
     "guid": "c4d6075f-805f-44ef-afb1-806f281ad6e2",
     "amount": "$1,084.87",
@@ -1790,7 +1790,7 @@ const TRANSACTIONS = [
     "date": "1993-07-07T02:49:44.154Z"
   },
   {
-    "_id": "58d5809662e7afacfd47b913",
+    "id": "58d5809662e7afacfd47b913",
     "index": 33,
     "guid": "534fb0ab-f0d2-4744-b4da-48e7b391b297",
     "amount": "$178.69",
@@ -1798,7 +1798,7 @@ const TRANSACTIONS = [
     "date": "1971-07-31T17:47:17.474Z"
   },
   {
-    "_id": "58d580967ebd5f9479d3796b",
+    "id": "58d580967ebd5f9479d3796b",
     "index": 34,
     "guid": "eaea9e8c-b772-4358-9354-e7ffa077f546",
     "amount": "$3,374.44",
@@ -1806,7 +1806,7 @@ const TRANSACTIONS = [
     "date": "2008-03-20T20:43:27.677Z"
   },
   {
-    "_id": "58d580963b3391e4db5e1ebb",
+    "id": "58d580963b3391e4db5e1ebb",
     "index": 35,
     "guid": "d582f4e6-e180-44e6-bcb3-8472a74d485c",
     "amount": "$508.42",
@@ -1814,7 +1814,7 @@ const TRANSACTIONS = [
     "date": "2003-02-26T17:21:09.729Z"
   },
   {
-    "_id": "58d58096a786e4e3d9308319",
+    "id": "58d58096a786e4e3d9308319",
     "index": 36,
     "guid": "2aeda067-b860-4853-be7b-2166fb4d95ec",
     "amount": "$1,208.26",
@@ -1822,7 +1822,7 @@ const TRANSACTIONS = [
     "date": "2002-03-10T13:22:53.034Z"
   },
   {
-    "_id": "58d58096c93e57ebf758f98e",
+    "id": "58d58096c93e57ebf758f98e",
     "index": 37,
     "guid": "813cdd74-0d9e-4e65-ade7-725a99b00b04",
     "amount": "$3,300.50",
@@ -1830,7 +1830,7 @@ const TRANSACTIONS = [
     "date": "1987-12-02T23:54:51.893Z"
   },
   {
-    "_id": "58d580966dd995329e810003",
+    "id": "58d580966dd995329e810003",
     "index": 38,
     "guid": "a7087ee6-fcf2-4fdb-87e9-3c728e0c352a",
     "amount": "$2,404.41",
@@ -1838,7 +1838,7 @@ const TRANSACTIONS = [
     "date": "1995-05-25T09:56:50.472Z"
   },
   {
-    "_id": "58d58096ced1c31eefc56f28",
+    "id": "58d58096ced1c31eefc56f28",
     "index": 39,
     "guid": "3157d44c-aa93-4ee8-8390-d9632a99bcf6",
     "amount": "$3,462.11",
@@ -1846,7 +1846,7 @@ const TRANSACTIONS = [
     "date": "2009-12-21T20:41:28.753Z"
   },
   {
-    "_id": "58d58096b0fafea4b7f0c1b5",
+    "id": "58d58096b0fafea4b7f0c1b5",
     "index": 40,
     "guid": "6c940908-2a34-4430-9ef5-86b07fc04efa",
     "amount": "$3,068.33",
@@ -1854,7 +1854,7 @@ const TRANSACTIONS = [
     "date": "2015-02-12T22:25:10.754Z"
   },
   {
-    "_id": "58d580965804adbce00baa31",
+    "id": "58d580965804adbce00baa31",
     "index": 41,
     "guid": "4b334ad8-1864-4b0a-b672-72952dc2fa93",
     "amount": "$918.20",
@@ -1862,7 +1862,7 @@ const TRANSACTIONS = [
     "date": "2004-08-29T17:54:04.531Z"
   },
   {
-    "_id": "58d580964df0da597279637c",
+    "id": "58d580964df0da597279637c",
     "index": 42,
     "guid": "b552c9ed-f3db-4e37-8f40-f0b9483dc2a0",
     "amount": "$3,179.41",
@@ -1870,7 +1870,7 @@ const TRANSACTIONS = [
     "date": "2008-02-09T17:57:50.058Z"
   },
   {
-    "_id": "58d58096b5efa0505cb77d9b",
+    "id": "58d58096b5efa0505cb77d9b",
     "index": 43,
     "guid": "a405efe6-1462-4322-9a34-35596037c146",
     "amount": "$2,646.62",
@@ -1878,7 +1878,7 @@ const TRANSACTIONS = [
     "date": "2008-02-18T12:52:48.009Z"
   },
   {
-    "_id": "58d58096d7fd4f6eff5cfe5d",
+    "id": "58d58096d7fd4f6eff5cfe5d",
     "index": 44,
     "guid": "613784c2-84f4-45d5-8812-8872d60e5072",
     "amount": "$1,806.10",
@@ -1886,7 +1886,7 @@ const TRANSACTIONS = [
     "date": "2002-12-03T20:33:43.231Z"
   },
   {
-    "_id": "58d5809697cdac7c78e73662",
+    "id": "58d5809697cdac7c78e73662",
     "index": 45,
     "guid": "bb448d53-e6f8-40f1-a632-7631f101866e",
     "amount": "$471.61",
@@ -1894,7 +1894,7 @@ const TRANSACTIONS = [
     "date": "1973-01-23T22:15:14.191Z"
   },
   {
-    "_id": "58d580960fdfb4109657e23a",
+    "id": "58d580960fdfb4109657e23a",
     "index": 46,
     "guid": "a2fe72a0-3bad-4564-a39f-f5f22f01ae87",
     "amount": "$3,531.68",
@@ -1902,7 +1902,7 @@ const TRANSACTIONS = [
     "date": "2013-02-28T20:52:54.593Z"
   },
   {
-    "_id": "58d5809620869d8dc7543c4a",
+    "id": "58d5809620869d8dc7543c4a",
     "index": 47,
     "guid": "e463a334-38a7-46ea-af65-364f9cb71471",
     "amount": "$1,787.22",
@@ -1910,7 +1910,7 @@ const TRANSACTIONS = [
     "date": "1989-11-30T01:07:20.340Z"
   },
   {
-    "_id": "58d58096230243855dbda92d",
+    "id": "58d58096230243855dbda92d",
     "index": 48,
     "guid": "e1333604-8ae0-4bd7-a3c6-ef74b5d57f59",
     "amount": "$3,738.46",
@@ -1918,7 +1918,7 @@ const TRANSACTIONS = [
     "date": "1980-02-20T11:04:40.055Z"
   },
   {
-    "_id": "58d580965e8c9a72e1f9a7ab",
+    "id": "58d580965e8c9a72e1f9a7ab",
     "index": 49,
     "guid": "4b405d48-2681-4759-b057-119451ee36d4",
     "amount": "$1,864.86",
@@ -1926,7 +1926,7 @@ const TRANSACTIONS = [
     "date": "2010-09-07T23:45:45.734Z"
   },
   {
-    "_id": "58d58096b48604abffc67fa0",
+    "id": "58d58096b48604abffc67fa0",
     "index": 50,
     "guid": "84c4a84e-fc14-4fb3-b95f-5cb10216cc5e",
     "amount": "$2,008.57",
@@ -1934,7 +1934,7 @@ const TRANSACTIONS = [
     "date": "2008-03-17T19:13:12.881Z"
   },
   {
-    "_id": "58d58096ec67262686e83a79",
+    "id": "58d58096ec67262686e83a79",
     "index": 51,
     "guid": "e7ea546e-5e08-4654-a06d-3986f4093593",
     "amount": "$110.91",
@@ -1942,7 +1942,7 @@ const TRANSACTIONS = [
     "date": "2004-01-17T18:35:17.849Z"
   },
   {
-    "_id": "58d580961573bfe10b64311d",
+    "id": "58d580961573bfe10b64311d",
     "index": 52,
     "guid": "17d633f2-bcb4-42ac-b004-9bc85f8e2629",
     "amount": "$1,035.35",
@@ -1950,7 +1950,7 @@ const TRANSACTIONS = [
     "date": "1998-01-08T04:01:48.807Z"
   },
   {
-    "_id": "58d58096d18d3db85d986e67",
+    "id": "58d58096d18d3db85d986e67",
     "index": 53,
     "guid": "dec92562-f60f-4d3d-b8e5-295e45f1de3c",
     "amount": "$617.59",
@@ -1958,7 +1958,7 @@ const TRANSACTIONS = [
     "date": "1976-04-12T11:38:19.918Z"
   },
   {
-    "_id": "58d580969292007e94df9b1a",
+    "id": "58d580969292007e94df9b1a",
     "index": 54,
     "guid": "ea2ab859-beec-4be8-8642-c8c10355da30",
     "amount": "$3,130.28",
@@ -1966,7 +1966,7 @@ const TRANSACTIONS = [
     "date": "1977-06-19T11:55:28.420Z"
   },
   {
-    "_id": "58d58096b3a9eee455e3f613",
+    "id": "58d58096b3a9eee455e3f613",
     "index": 55,
     "guid": "8e500e17-0d13-45a7-8003-efcfbef560cf",
     "amount": "$2,668.84",
@@ -1974,7 +1974,7 @@ const TRANSACTIONS = [
     "date": "1980-09-12T15:54:56.375Z"
   },
   {
-    "_id": "58d58096c8e1977174bf8e15",
+    "id": "58d58096c8e1977174bf8e15",
     "index": 56,
     "guid": "b4685834-35b6-4876-959c-488b990b44e4",
     "amount": "$2,697.23",
@@ -1982,7 +1982,7 @@ const TRANSACTIONS = [
     "date": "1971-05-06T15:40:11.809Z"
   },
   {
-    "_id": "58d580968a3266a341dcee67",
+    "id": "58d580968a3266a341dcee67",
     "index": 57,
     "guid": "db5fa84f-3646-48dd-a2d6-7184c2d1b0c5",
     "amount": "$658.46",
@@ -1990,7 +1990,7 @@ const TRANSACTIONS = [
     "date": "1998-11-05T19:22:29.191Z"
   },
   {
-    "_id": "58d58096dd55c1001720daf8",
+    "id": "58d58096dd55c1001720daf8",
     "index": 58,
     "guid": "cb475502-db7f-4c5e-802a-17ad2f158517",
     "amount": "$3,500.27",
@@ -1998,7 +1998,7 @@ const TRANSACTIONS = [
     "date": "2004-11-23T13:39:12.963Z"
   },
   {
-    "_id": "58d58096416f5745fb826c43",
+    "id": "58d58096416f5745fb826c43",
     "index": 59,
     "guid": "f82bff14-ed15-426f-bd51-158e64a5e564",
     "amount": "$185.98",
@@ -2006,7 +2006,7 @@ const TRANSACTIONS = [
     "date": "1983-06-06T00:44:55.073Z"
   },
   {
-    "_id": "58d58096e9d95b8097e7fda0",
+    "id": "58d58096e9d95b8097e7fda0",
     "index": 60,
     "guid": "a91d9ac5-7a68-483e-9ba7-4b0e73fc754b",
     "amount": "$210.78",
@@ -2014,7 +2014,7 @@ const TRANSACTIONS = [
     "date": "2008-02-19T23:06:22.254Z"
   },
   {
-    "_id": "58d58096771425ead85869fe",
+    "id": "58d58096771425ead85869fe",
     "index": 61,
     "guid": "ec56a1fa-0e0e-4095-9db8-6eade87e6c92",
     "amount": "$2,408.12",
@@ -2022,7 +2022,7 @@ const TRANSACTIONS = [
     "date": "2005-02-19T17:31:21.902Z"
   },
   {
-    "_id": "58d58096a2b98340ee862e81",
+    "id": "58d58096a2b98340ee862e81",
     "index": 62,
     "guid": "c421c225-8b4c-41a0-a788-eac142e8855b",
     "amount": "$2,017.53",
@@ -2030,7 +2030,7 @@ const TRANSACTIONS = [
     "date": "2015-06-17T02:54:30.185Z"
   },
   {
-    "_id": "58d58096d90e3f465f180721",
+    "id": "58d58096d90e3f465f180721",
     "index": 63,
     "guid": "a7f8b082-f654-4297-8582-5e12f4170149",
     "amount": "$737.91",
@@ -2038,7 +2038,7 @@ const TRANSACTIONS = [
     "date": "2000-07-09T03:47:21.961Z"
   },
   {
-    "_id": "58d58096c4fd69a51632f1c3",
+    "id": "58d58096c4fd69a51632f1c3",
     "index": 64,
     "guid": "c1849da9-bb47-4a9d-bff8-92706e6eeb99",
     "amount": "$1,009.16",
@@ -2046,7 +2046,7 @@ const TRANSACTIONS = [
     "date": "1990-08-25T10:33:36.261Z"
   },
   {
-    "_id": "58d58096f53f2b48ebff387f",
+    "id": "58d58096f53f2b48ebff387f",
     "index": 65,
     "guid": "0ae76f25-df9d-43b2-b7fb-f16a1952ed0e",
     "amount": "$3,002.68",
@@ -2054,7 +2054,7 @@ const TRANSACTIONS = [
     "date": "1990-11-08T16:34:19.347Z"
   },
   {
-    "_id": "58d5809681334966dc7f1886",
+    "id": "58d5809681334966dc7f1886",
     "index": 66,
     "guid": "90ed11c5-6c14-46aa-acae-3bddd907f2c1",
     "amount": "$580.15",
@@ -2062,7 +2062,7 @@ const TRANSACTIONS = [
     "date": "1984-12-24T03:06:51.526Z"
   },
   {
-    "_id": "58d58096e6870e38cfe9feea",
+    "id": "58d58096e6870e38cfe9feea",
     "index": 67,
     "guid": "5b0d9de2-2c68-44df-8c82-9eaeb3f59f3e",
     "amount": "$1,518.51",
@@ -2070,7 +2070,7 @@ const TRANSACTIONS = [
     "date": "2015-03-15T03:10:25.109Z"
   },
   {
-    "_id": "58d58096ae3c450f38e4ac41",
+    "id": "58d58096ae3c450f38e4ac41",
     "index": 68,
     "guid": "9fc8b5d3-a6ef-4c93-8309-6a1867e6e19a",
     "amount": "$1,173.05",
@@ -2078,7 +2078,7 @@ const TRANSACTIONS = [
     "date": "1995-06-29T23:50:57.538Z"
   },
   {
-    "_id": "58d580968d1c5c3a7f321797",
+    "id": "58d580968d1c5c3a7f321797",
     "index": 69,
     "guid": "6f7f97a4-dbfe-4f91-970a-627780137e86",
     "amount": "$2,299.83",
@@ -2086,7 +2086,7 @@ const TRANSACTIONS = [
     "date": "2004-05-14T22:41:08.291Z"
   },
   {
-    "_id": "58d58096a99bd94182977a53",
+    "id": "58d58096a99bd94182977a53",
     "index": 70,
     "guid": "f2a7f7d9-fb33-4d6d-9139-f9730e29e59a",
     "amount": "$3,237.30",
@@ -2094,7 +2094,7 @@ const TRANSACTIONS = [
     "date": "1974-12-17T02:53:27.797Z"
   },
   {
-    "_id": "58d5809616e3f88e7fdfaf25",
+    "id": "58d5809616e3f88e7fdfaf25",
     "index": 71,
     "guid": "953eac56-3f9a-4e65-bd81-c619c651e0b7",
     "amount": "$2,866.99",
@@ -2102,7 +2102,7 @@ const TRANSACTIONS = [
     "date": "1972-03-27T14:54:38.492Z"
   },
   {
-    "_id": "58d580963469c072bd548656",
+    "id": "58d580963469c072bd548656",
     "index": 72,
     "guid": "03cae590-8915-4544-a379-f7eb69c88782",
     "amount": "$1,118.14",
@@ -2110,7 +2110,7 @@ const TRANSACTIONS = [
     "date": "2016-12-11T03:42:06.111Z"
   },
   {
-    "_id": "58d58096e6274ce5b970af94",
+    "id": "58d58096e6274ce5b970af94",
     "index": 73,
     "guid": "bdbcd1a8-3b36-4b22-bbce-daabba3bf6f6",
     "amount": "$126.67",
@@ -2118,7 +2118,7 @@ const TRANSACTIONS = [
     "date": "1986-03-09T00:50:11.961Z"
   },
   {
-    "_id": "58d5809657e9f14480d3fc4b",
+    "id": "58d5809657e9f14480d3fc4b",
     "index": 74,
     "guid": "b5e2a02e-0aff-461e-ae8d-a0e193e81f5b",
     "amount": "$3,970.57",
@@ -2126,7 +2126,7 @@ const TRANSACTIONS = [
     "date": "1980-05-20T10:44:43.951Z"
   },
   {
-    "_id": "58d5809632aa63429ff3bb23",
+    "id": "58d5809632aa63429ff3bb23",
     "index": 75,
     "guid": "085c0521-60f2-4c3a-b0db-1e7d77e3e9a9",
     "amount": "$2,087.11",
@@ -2134,7 +2134,7 @@ const TRANSACTIONS = [
     "date": "1984-10-19T01:27:50.513Z"
   },
   {
-    "_id": "58d5809681a894b95a5465d4",
+    "id": "58d5809681a894b95a5465d4",
     "index": 76,
     "guid": "930001ac-3eae-4d95-a696-f4f6d58b8fd7",
     "amount": "$1,820.27",
@@ -2142,7 +2142,7 @@ const TRANSACTIONS = [
     "date": "1999-06-16T05:16:19.017Z"
   },
   {
-    "_id": "58d580966bd8aa3df94a568b",
+    "id": "58d580966bd8aa3df94a568b",
     "index": 77,
     "guid": "4642d05e-295c-44cc-a844-dd2a4a9ce118",
     "amount": "$1,703.37",
@@ -2150,7 +2150,7 @@ const TRANSACTIONS = [
     "date": "1978-10-08T03:20:30.511Z"
   },
   {
-    "_id": "58d580961fa752c0f2d74d15",
+    "id": "58d580961fa752c0f2d74d15",
     "index": 78,
     "guid": "8b2715ce-c99b-4fc7-ae8f-bd967730a867",
     "amount": "$3,144.45",
@@ -2158,7 +2158,7 @@ const TRANSACTIONS = [
     "date": "2004-09-15T23:02:21.716Z"
   },
   {
-    "_id": "58d58096da749f6c0cb7eb28",
+    "id": "58d58096da749f6c0cb7eb28",
     "index": 79,
     "guid": "dead293d-c242-4fc5-b8fe-9adebe0c7bef",
     "amount": "$2,532.17",
@@ -2166,7 +2166,7 @@ const TRANSACTIONS = [
     "date": "2007-01-13T04:05:54.805Z"
   },
   {
-    "_id": "58d58096d651f2986d144a63",
+    "id": "58d58096d651f2986d144a63",
     "index": 80,
     "guid": "5d9657f1-d82c-40c1-878b-0c30dced9795",
     "amount": "$3,046.22",
@@ -2174,7 +2174,7 @@ const TRANSACTIONS = [
     "date": "1973-01-10T10:57:36.459Z"
   },
   {
-    "_id": "58d5809603c8543de9095f8b",
+    "id": "58d5809603c8543de9095f8b",
     "index": 81,
     "guid": "556e4c43-83ec-418f-a249-312f4e8f7f60",
     "amount": "$297.95",
@@ -2182,7 +2182,7 @@ const TRANSACTIONS = [
     "date": "1982-06-26T09:19:25.014Z"
   },
   {
-    "_id": "58d580969c5504ad16d7f318",
+    "id": "58d580969c5504ad16d7f318",
     "index": 82,
     "guid": "a8911814-a2c9-411d-a127-f87e218c31b9",
     "amount": "$1,632.63",
@@ -2190,7 +2190,7 @@ const TRANSACTIONS = [
     "date": "1972-07-14T02:46:54.290Z"
   },
   {
-    "_id": "58d580961375b2b9f6421187",
+    "id": "58d580961375b2b9f6421187",
     "index": 83,
     "guid": "0d427441-cb1e-43a5-820e-ce956153619c",
     "amount": "$905.97",
@@ -2198,7 +2198,7 @@ const TRANSACTIONS = [
     "date": "1974-12-27T05:15:59.038Z"
   },
   {
-    "_id": "58d5809661a2574e3d0f4ead",
+    "id": "58d5809661a2574e3d0f4ead",
     "index": 84,
     "guid": "3ced49fa-154e-499a-8778-17b026173d62",
     "amount": "$2,435.80",
@@ -2206,7 +2206,7 @@ const TRANSACTIONS = [
     "date": "1973-07-07T22:58:27.522Z"
   },
   {
-    "_id": "58d580963b101000f7d32c7b",
+    "id": "58d580963b101000f7d32c7b",
     "index": 85,
     "guid": "6c0a49d4-2813-4eaf-ba39-165bc87664da",
     "amount": "$1,361.72",
@@ -2214,7 +2214,7 @@ const TRANSACTIONS = [
     "date": "2009-02-08T14:11:39.672Z"
   },
   {
-    "_id": "58d58096a8a4f5de4d96a20c",
+    "id": "58d58096a8a4f5de4d96a20c",
     "index": 86,
     "guid": "6ea64721-50f6-4ce7-8a95-3d955b7b10d4",
     "amount": "$1,192.69",
@@ -2222,7 +2222,7 @@ const TRANSACTIONS = [
     "date": "2001-10-10T20:00:19.131Z"
   },
   {
-    "_id": "58d5809630eac88c71c6fb27",
+    "id": "58d5809630eac88c71c6fb27",
     "index": 87,
     "guid": "f4cf09d6-5123-4b91-8a8e-1201faea74fc",
     "amount": "$1,434.35",
@@ -2230,7 +2230,7 @@ const TRANSACTIONS = [
     "date": "1979-01-27T03:34:01.973Z"
   },
   {
-    "_id": "58d58096441990bac173974d",
+    "id": "58d58096441990bac173974d",
     "index": 88,
     "guid": "93324a9e-2ff5-4936-8a85-e05dc6e8287f",
     "amount": "$1,933.69",
@@ -2238,7 +2238,7 @@ const TRANSACTIONS = [
     "date": "2000-05-25T12:40:29.117Z"
   },
   {
-    "_id": "58d58096fb144d04ec84b217",
+    "id": "58d58096fb144d04ec84b217",
     "index": 89,
     "guid": "2ba2fa34-23ca-4e60-b75e-7ce3b8796c88",
     "amount": "$2,580.92",
@@ -2246,7 +2246,7 @@ const TRANSACTIONS = [
     "date": "1981-08-02T13:50:18.053Z"
   },
   {
-    "_id": "58d580960af4015e2c17a39d",
+    "id": "58d580960af4015e2c17a39d",
     "index": 90,
     "guid": "5017d509-3054-44b4-bccc-49a4d068378d",
     "amount": "$1,997.89",
@@ -2254,7 +2254,7 @@ const TRANSACTIONS = [
     "date": "1981-10-17T20:04:19.271Z"
   },
   {
-    "_id": "58d580961ed59b37bf47bbf2",
+    "id": "58d580961ed59b37bf47bbf2",
     "index": 91,
     "guid": "f1e6527b-3e8a-4ddb-ae74-8f0fa0c96f1d",
     "amount": "$3,653.24",
@@ -2262,7 +2262,7 @@ const TRANSACTIONS = [
     "date": "2013-05-30T00:02:47.372Z"
   },
   {
-    "_id": "58d5809602705658670e9347",
+    "id": "58d5809602705658670e9347",
     "index": 92,
     "guid": "d74a0489-2a0c-47cf-a42a-7bf223553266",
     "amount": "$3,010.46",
@@ -2270,7 +2270,7 @@ const TRANSACTIONS = [
     "date": "1979-02-20T22:58:47.283Z"
   },
   {
-    "_id": "58d5809615864f30f49ede4a",
+    "id": "58d5809615864f30f49ede4a",
     "index": 93,
     "guid": "f9ced135-22ed-4bac-9360-6a1e1a0d7219",
     "amount": "$3,951.33",
@@ -2278,7 +2278,7 @@ const TRANSACTIONS = [
     "date": "2008-09-05T02:28:37.236Z"
   },
   {
-    "_id": "58d5809610399eb12945730d",
+    "id": "58d5809610399eb12945730d",
     "index": 94,
     "guid": "c7c9d4b6-e361-4b84-b8cb-143306119c19",
     "amount": "$2,711.09",
@@ -2286,7 +2286,7 @@ const TRANSACTIONS = [
     "date": "1997-11-21T15:58:30.002Z"
   },
   {
-    "_id": "58d580963a0334fd72180f85",
+    "id": "58d580963a0334fd72180f85",
     "index": 95,
     "guid": "33809414-4b1e-44ed-9196-4a70bda7221b",
     "amount": "$976.45",
@@ -2294,7 +2294,7 @@ const TRANSACTIONS = [
     "date": "1983-06-30T12:27:51.641Z"
   },
   {
-    "_id": "58d580963d9a431cc2b63fc3",
+    "id": "58d580963d9a431cc2b63fc3",
     "index": 96,
     "guid": "99e86050-d251-4bae-ab21-b8c4ec86fbbb",
     "amount": "$2,844.58",
@@ -2302,7 +2302,7 @@ const TRANSACTIONS = [
     "date": "2008-03-20T15:56:47.900Z"
   },
   {
-    "_id": "58d58096ab331b7bffd1659c",
+    "id": "58d58096ab331b7bffd1659c",
     "index": 97,
     "guid": "673c0165-327d-4c04-b8c9-a563081f3c5b",
     "amount": "$1,275.47",
@@ -2310,7 +2310,7 @@ const TRANSACTIONS = [
     "date": "2014-08-01T12:33:07.215Z"
   },
   {
-    "_id": "58d580968a16218dd01967a8",
+    "id": "58d580968a16218dd01967a8",
     "index": 98,
     "guid": "46e6a82c-3b0e-4764-ae3c-4c4c67b527c8",
     "amount": "$3,118.76",
@@ -2326,3 +2326,5 @@ const DATA = {
 };
 
 module.exports = { DATA };
+
+
