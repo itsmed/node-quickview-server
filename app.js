@@ -4,6 +4,11 @@ const path = require('path');
 const fs = require('fs');
 const cors = require('cors');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
+
+const connectionUrl = 'mongodb://localhost/quickview';
+
+
 const { DATA } = require('./dev_data');
 
 const app = express();
@@ -11,19 +16,105 @@ app.use(morgan('dev'));
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get('/api/all-users', (req, res) => {
+
+/*****************************************************************
+
+        MONGOOSE DATABASE
+
+*****************************************************************/
+
+// ERROR HANDLER
+const handleDatabaseError = (err, res) => {
+  console.error('ERROR CONNECTING: ', err);
+  res.status(503).send('Database Error');
+};
+
+
+// TRANSACTION SCHEMA
+const transactionSchema = mongoose.Schema({
+  id: String,
+  index: Number,
+  guid: String,
+  amount: String,
+  user_id: String,
+  date: String
+});
+
+/***********************/
+// Add schema methods here before calling mongoose.model
+
+
+
+/***********************/
+
+
+var Transaction = mongoose.model('Transaction', transactionSchema);
+
+app.get('/api/users/all', (req, res) => {
   res.json({ data: DATA.users });
 });
 
 
+/*****************************************************************
 
-app.get('/api/all-transactions', (req, res) => {
-  res.json({ data: DATA.transactions });
+        TRANSACTIONS ROUTES
+
+*****************************************************************/
+
+
+
+
+app.get('/api/transactions/all', (req, res) => {
+  mongoose.connect(connectionUrl);
+  let db = mongoose.connection;
+
+  db.on('error', err => handleDatabaseError(err, res));
+  db.once('open', () => {
+    console.log('connected to db');
+
+    Transaction.find((err, transactions) => {
+      if (err) {
+        return handleDatabaseError(err, res);
+      }
+      console.log('FOUND TRANSACTIONS', transactions);
+      res.json({ data: transactions });
+      db.close();
+    });
+  });
+  db.on('disconnected', () => console.log('DB DISCONNECTED!'));
+});
+
+
+app.get('/api/transactions/by-id', (req, res) => {
+  // console.log('req', req.url, 'originalUrl', req.query.i);
+  // res.send('ok')
+  mongoose.connect(connectionUrl);
+  let db = mongoose.connection;
+
+  db.on('error', err => handleDatabaseError(err, res));
+  db.once('open', () => {
+    console.log('connected to db', req.query.i, typeof req.query.i);
+
+    Transaction.findOne({ 'id': req.query.i}, (err, transactions) => {
+      if (err) {
+        return handleDatabaseError(err, res);
+      }
+      console.log('FOUND TRANSACTIONS', transactions);
+      res.json({ data: transactions });
+      db.close();
+    });
+  });
+  db.on('disconnected', () => console.log('DB DISCONNECTED!'));
 });
 
 
 
-app.get('/api/all-employees', (req, res) => {
+/*****************************************************************
+
+        EMPLOYEE ROUTES
+*****************************************************************/
+
+app.get('/api/employees/all', (req, res) => {
   res.json({ data: DATA.employees });
 });
 
