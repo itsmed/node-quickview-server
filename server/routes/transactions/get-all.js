@@ -20,3 +20,4 @@ module.exports = function getAllTransactions(req, res) {
   });
   db.on('disconnected', () => console.log('DB DISCONNECTED!'));
 };
+
