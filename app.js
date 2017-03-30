@@ -60,43 +60,6 @@ const transactionSchema = mongoose.Schema({
 var Transaction = mongoose.model('Transaction', transactionSchema);
 
 
-// app.get('/api/users/all', (req, res) => {
-//   console.log('req', req.url.includes('all'));
-//   mongoose.connect(connectionUrl);
-//   let db = mongoose.connection;
-
-//   db.on('error', err => handleDatabaseError(err, res));
-//   db.once('open', () => {
-//     User.find((err, users) => {
-//       if (err) {
-//         return handleDatabaseError(err, res);
-//       }
-//       res.json({ data: users });
-//       db.close();
-//     });
-//   });
-//   db.on('disconnected', () => console.log('DB DISCONNECTED!'));
-// });
-
-app.get('/api/users/id/:id', (req, res) => {
-  mongoose.connect(connectionUrl);
-  let db = mongoose.connection;
-  console.log('user by id', req.params.id, typeof req.params.id);
-  db.on('error', err => handleDatabaseError(err, res));
-  db.once('open', () => {
-    User.findOne({ '_id': req.params.id}, (err, user) => {
-      if (err) {
-        return handleDatabaseError(err, res);
-      }
-      console.log('found: ', user);
-      res.json({ data: user });
-      db.close();
-    });
-  });
-  db.on('disconnected', () => console.log('DB DISCONNECTED!'));
-});
-
-
 /*****************************************************************
 
         TRANSACTIONS ROUTES

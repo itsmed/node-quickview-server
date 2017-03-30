@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectionUrl = process.env.NODE_ENV === 'development' ? 
-  process.env.test_db_connection_url : prod_db_connection_url;
+const handleDatabaseError = require('../handle-db-error');
 
 const userSchema = mongoose.Schema({
   "id": String,
@@ -22,6 +21,8 @@ const userSchema = mongoose.Schema({
   "registered": String,
   "full_name": String
 });
+
+userSchema.methods.handleDatabaseError = handleDatabaseError;
 
 const User = mongoose.model('User', userSchema);
 
