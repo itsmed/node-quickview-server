@@ -1,9 +1,4 @@
 const {
-  getAllUsers,
-  getSingleUser,
-} = require('./routes/user-routes');
-
-const {
   getAllTransactions,
   getSingleTransaction,
 } = require('./routes/transaction-routes');
@@ -11,6 +6,8 @@ const {
 const {
   getSingleEmployee,
   getAllEmployees,
+  getAllUsers,
+  getSingleUser,
 } = require('./routes');
 
 module.exports = function(app) {
