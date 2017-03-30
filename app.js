@@ -70,13 +70,10 @@ app.get('/api/transactions/all', (req, res) => {
 
   db.on('error', err => handleDatabaseError(err, res));
   db.once('open', () => {
-    console.log('connected to db');
-
     Transaction.find((err, transactions) => {
       if (err) {
         return handleDatabaseError(err, res);
       }
-      console.log('FOUND TRANSACTIONS', transactions);
       res.json({ data: transactions });
       db.close();
     });
@@ -85,21 +82,17 @@ app.get('/api/transactions/all', (req, res) => {
 });
 
 
-app.get('/api/transactions/by-id', (req, res) => {
-  // console.log('req', req.url, 'originalUrl', req.query.i);
-  // res.send('ok')
+app.get('/api/transactions/id/:id', (req, res) => {
   mongoose.connect(connectionUrl);
   let db = mongoose.connection;
 
   db.on('error', err => handleDatabaseError(err, res));
   db.once('open', () => {
-    console.log('connected to db', req.query.i, typeof req.query.i);
-
-    Transaction.findOne({ 'id': req.query.i}, (err, transactions) => {
+    Transaction.findOne({ '_id': req.params.id}, (err, transactions) => {
       if (err) {
         return handleDatabaseError(err, res);
       }
-      console.log('FOUND TRANSACTIONS', transactions);
+
       res.json({ data: transactions });
       db.close();
     });
