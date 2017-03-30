@@ -3,10 +3,11 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const fs = require('fs');
 const cors = require('cors');
-
+const morgan = require('morgan');
 const { DATA } = require('./dev_data');
 
 const app = express();
+app.use(morgan('dev'));
 app.use(cors());
 app.use(bodyParser.json());
 
