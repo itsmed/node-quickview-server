@@ -6,9 +6,6 @@ const employeeSchema = mongoose.Schema({
   "id": String,
   "index": Number,
   "guid": String,
-  "isActive": Boolean,
-  "balance": String,
-  "picture": String,
   "name": {
     "first": String,
     "last": String
@@ -16,9 +13,7 @@ const employeeSchema = mongoose.Schema({
   "company": String,
   "email": String,
   "phone": String,
-  "address": String,
-  "about": String,
-  "registered": String,
+  "permissions": Number,
   "full_name": String
 });
 
