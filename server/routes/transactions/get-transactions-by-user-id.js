@@ -10,12 +10,10 @@ module.exports = function getTransactionsByUserId(req, res) {
 
   db.on('error', err => handleDatabaseError(err, res));
   db.once('open', () => {
-    console.log('id', req.params.id);
     Transaction.find({ 'user_id': req.params.id}, (err, transaction) => {
       if (err) {
         return handleDatabaseError(err, res);
       }
-      console.log('transa', transaction);
       res.json({ data: transaction });
       db.close();
     });
