@@ -5,6 +5,7 @@ const {
   getSingleUser,
   getAllTransactions,
   getSingleTransaction,
+  getTransactionsByUserId,
 } = require('./routes');
 
 module.exports = function(app) {
@@ -21,7 +22,7 @@ module.exports = function(app) {
 
   app.get('/api/transactions/all', getAllTransactions);
   app.get('/api/transactions/id/:id', getSingleTransaction)
-
+  app.get('/api/transactions/user/id/:id', getTransactionsByUserId);
 
   /**************************************
     /employee routes

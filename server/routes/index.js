@@ -10,6 +10,7 @@ const {
 const {
   getAllTransactions,
   getSingleTransaction,
+  getTransactionsByUserId,
 } = require('./transactions');
 
 module.exports = {
@@ -19,4 +20,5 @@ module.exports = {
   getSingleUser,
   getAllTransactions,
   getSingleTransaction,
+  getTransactionsByUserId,
 };
