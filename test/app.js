@@ -1,6 +1,6 @@
 const request = require('supertest');
 
-describe('Server Existence', () => {
+describe('Test Setup', () => {
   let server;
   let connection;
 
