@@ -1,6 +1,7 @@
 const {
   getSingleEmployee,
   getAllEmployees,
+  getEmployeesByEmail,
   getEmployeeByName,
   getEmployeesByPermissions,
   getAllUsers,
@@ -33,4 +34,5 @@ module.exports = function(app) {
   app.get('/api/employees/id/:id', getSingleEmployee);
   app.get('/api/employees/search/name/:name', getEmployeeByName);
   app.get('/api/employees/search/permissions/:permissions', getEmployeesByPermissions);
+  app.get('/api/employees/search/email/:email', getEmployeesByEmail);
 }

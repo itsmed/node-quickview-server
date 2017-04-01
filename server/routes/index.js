@@ -1,6 +1,7 @@
 const {
   getAllEmployees,
   getSingleEmployee,
+  getEmployeesByEmail,
   getEmployeeByName,
   getEmployeesByPermissions,
 } = require('./employees');
@@ -17,6 +18,7 @@ const {
 
 module.exports = {
   getAllEmployees,
+  getEmployeesByEmail,
   getEmployeeByName,
   getEmployeesByPermissions,
   getSingleEmployee,
