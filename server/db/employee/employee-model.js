@@ -21,5 +21,3 @@ const employeeSchema = mongoose.Schema({
 employeeSchema.methods.handleDatabaseError = handleDatabaseError;
 
 const Employee = db.model('Employee', employeeSchema);
-
-module.exports = Employee;

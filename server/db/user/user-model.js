@@ -23,6 +23,7 @@ const userSchema = mongoose.Schema({
 
 userSchema.methods.handleDatabaseError = handleDatabaseError;
 
-const User = db.model('User', userSchema);
+// const User = db.model('User', userSchema);
 
-module.exports = User;
+// module.exports = User;
+module.exports = userSchema;

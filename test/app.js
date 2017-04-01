@@ -20,13 +20,13 @@ describe('Test Setup', () => {
 
   it('should exist', (done) => {
     request(server)
-    .get('/')
-    .expect(404)
-    .end((err, res) => {
-      if (err) {
-        return done(err);
-      }
-      return done();
-    });
+      .get('/')
+      .expect(404)
+      .end((err, res) => {
+        if (err) {
+          return done(err);
+        }
+        return done();
+      });
   });
 });
