@@ -1,4 +1,7 @@
-const Employee = require('../../db/Employee/Employee-model');
+const mongoose = require('mongoose');
+
+const employeeSchema = require('../../db/employee/employee-schema');
+const Employee = mongoose.model('Employee', employeeSchema);
 
 module.exports = function getEmployeeByName(req, res) {
   let name = new RegExp(req.params.name);

@@ -1,4 +1,7 @@
-const Employee = require('../../db/Employee/Employee-model');
+const mongoose = require('mongoose');
+
+const employeeSchema = require('../../db/employee/employee-schema');
+const Employee = mongoose.model('Employee', employeeSchema);
 
 module.exports = function getEmployeesByEmail(req, res) {
   let email = new RegExp(req.params.email);
