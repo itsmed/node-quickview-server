@@ -1,7 +1,9 @@
 const getAllEmployees = require('./get-all');
-const getSingleEmployee = require('./get-single');
+const getEmployeeByName = require('./search-by-name');
+const getSingleEmployee = require('./get-single-by-id');
 
 module.exports = {
   getAllEmployees,
+  getEmployeeByName,
   getSingleEmployee,
 };
