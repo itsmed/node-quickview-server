@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const { db, handleDatabaseError } = require('../db');
 
-// const handleDatabaseError = require('../handle-db-error');
-
 const employeeSchema = mongoose.Schema({
   "id": String,
   "index": Number,
@@ -20,4 +18,4 @@ const employeeSchema = mongoose.Schema({
 
 employeeSchema.methods.handleDatabaseError = handleDatabaseError;
 
-const Employee = db.model('Employee', employeeSchema);
+module.exports = employeeSchema;
