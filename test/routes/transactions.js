@@ -29,5 +29,41 @@ describe('/transactions', () => {
           data: true
         }, done);
     });
+
+    it('should return an array of transactions', function(done) {
+      request(server)
+        .get('/api/transactions/all')
+        .set('Accept', 'application/json')
+        .expect(res => {
+          res.body.data = res.body.data[0].user_id
+        })
+        .expect(200, {
+          data: '58d580960a7d83fec3f5db6b'
+        }, done);
+    });
+  });
+
+  describe('/api/transactions/id/:id', () => {
+    it('shoud return a single transaction when passed a known id', (done) => {
+        request(server)
+          .get('/api/transactions/id/58dc8f69d769f4e31e911bad')
+          .set('Accept', 'application/json')
+          .expect(res => {
+            res.body.data = res.body.data._id
+          })
+          .expect(200, {
+            data: '58dc8f69d769f4e31e911bad'
+          }, done);
+    });
+
+    it('should return null when passed an unknown id', (done) => {
+        request(server)
+          .get('/api/transactions/id/58df03977de4c44116c460d5')
+          .set('Accept', 'application/json')
+          .expect(res => console.log('RES', res))
+          .expect(200, {
+            data: null
+          }, done);
+    });
   });
 });

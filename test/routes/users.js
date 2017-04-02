@@ -28,7 +28,19 @@ describe('/users', () => {
         .expect(200, {
           data: true
         }, done);
-    });    
+    });
+
+    it('should return an array of users', function(done) {
+      request(server)
+        .get('/api/users/all')
+        .set('Accept', 'application/json')
+        .expect(res => {
+          res.body.data = res.body.data[0].full_name.toLowerCase();
+        })
+        .expect(200, {
+          data: 'melendez randolph'
+        }, done);
+    });
   });
 
   describe('/api/users/id/:id', () => {

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { db, handleDatabaseError } = require('../db');
+const { handleDatabaseError } = require('../db');
 
 const employeeSchema = mongoose.Schema({
   "id": String,
