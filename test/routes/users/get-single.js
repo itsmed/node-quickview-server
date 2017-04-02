@@ -17,31 +17,6 @@ describe('/users', () => {
     connection.close();
   });
 
-  describe('/api/users/all', () => {
-    it('should return a json array', (done) => {
-      request(server)
-        .get('/api/users/all')
-        .set('Accept', 'application/json')
-        .expect(res => {
-          res.body.data = Array.isArray(res.body.data);
-        })
-        .expect(200, {
-          data: true
-        }, done);
-    });
-
-    it('should return an array of users', function(done) {
-      request(server)
-        .get('/api/users/all')
-        .set('Accept', 'application/json')
-        .expect(res => {
-          res.body.data = res.body.data[0].full_name.toLowerCase();
-        })
-        .expect(200, {
-          data: 'melendez randolph'
-        }, done);
-    });
-  });
 
   describe('/api/users/id/:id', () => {
     it('shold return an object when passed a known id', (done) => {
