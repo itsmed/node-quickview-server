@@ -27,12 +27,12 @@ if (process.env.NODE_ENV === 'production') {
 
     router(app);
 
-    const server = app.listen(3000, () => console.log('App listening on port 3000'));
+    app.listen(3000, () => console.log('App listening on port 3000'));
 
-    module.exports = server;
   }
 
-} else {
+} 
+if (process.env.NODE_ENV === 'development') {
   const express = require('express');
   const bodyParser = require('body-parser');
   const path = require('path');
