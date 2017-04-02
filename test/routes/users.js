@@ -8,7 +8,7 @@ describe('/users', () => {
     delete require.cache[require.resolve('../../app')];
     delete require.cache[require.resolve('../../server/db/db')];
     server = require('../../app');
-    let { db } = require('../../server/db/db');
+    let db = require('../../server/db/db');
     connection = db.connection;
   });
 
