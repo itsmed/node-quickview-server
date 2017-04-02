@@ -64,5 +64,40 @@ describe('/transactions', () => {
             data: null
           }, done);
     });
+
+    it('should return an error message when a database error occurs', (done) => {
+      request(server)
+        .get('/api/transactions/id/fjsf0a80')
+        .set('Accept', 'application/json')
+        .expect(200, {
+          data: 'Database error, please try again later'
+        }, done);
+    });
+  });
+
+  describe('/api/transactions/user/id/:id', () => {
+    it('should return a list of transactions when passed a known user_id', (done) => {
+      request(server)
+        .get('/api/transactions/user/id/:id')
+        .set('Accept', 'application/json')
+        .expect(res => {
+          res.body.data = Array.isArray(res.body.data);
+        })
+        .expect(200, {
+          data: true
+        }, done);
+    });
+
+    it('should return a list of transactions that belong to a single user', done => {
+      request(server)
+        .get('/api/transactions/user/id/58d58096aaf1e4119144f41f')
+        .set('Accept', 'application/json')
+        expect(res => {
+          res.body.data = res.body.data.every(t => t.user_id === '58d58096aaf1e4119144f41f');
+        })
+        .expect(200, {
+          data: true
+        }, done);
+    });
   });
 });

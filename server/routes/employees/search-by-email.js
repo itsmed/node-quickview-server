@@ -7,8 +7,7 @@ module.exports = function getEmployeesByEmail(req, res) {
   let email = new RegExp(req.params.email);
   Employee.find({'email': {$regex: req.params.email}}, (err, employees) => {
     if (err) {
-      console.log('ERROR', err);
-      return Employee.handleDatabaseError(err, res);
+      return res.json({ data: 'Database error, please try again later' });
     }
     res.json({ data: employees });
   });

@@ -6,7 +6,7 @@ const Transaction = mongoose.model('Transaction', transactionSchema);
 module.exports = function getTransactionsByUserId(req, res) {
   Transaction.find({ 'user_id': req.params.id}, (err, transaction) => {
     if (err) {
-      return Transaction.handleDatabaseError(err, res);
+      return res.json({ data: 'Database error, please try again later' });
     }
     res.json({ data: transaction });
   });
