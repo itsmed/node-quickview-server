@@ -60,7 +60,6 @@ describe('/transactions', () => {
         request(server)
           .get('/api/transactions/id/58df03977de4c44116c460d5')
           .set('Accept', 'application/json')
-          .expect(res => console.log('RES', res))
           .expect(200, {
             data: null
           }, done);
