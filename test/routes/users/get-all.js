@@ -1,6 +1,6 @@
 const request = require('supertest');
 
-describe('/users', () => {
+describe('api/users/all', () => {
   let server;
   let connection;
 
