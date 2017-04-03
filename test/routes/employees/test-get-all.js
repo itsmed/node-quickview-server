@@ -1,6 +1,6 @@
 const request = require('supertest');
 
-describe('/api/transactions/all', () => {
+describe('/api/employees/all', () => {
   let server;
   let db;
 
@@ -16,9 +16,9 @@ describe('/api/transactions/all', () => {
     db.close();
   });
 
-  it('should return an array', function(done) {
+  it('should return a json array', (done) => {
     request(server)
-      .get('/api/transactions/all')
+      .get('/api/employees/all')
       .set('Accept', 'application/json')
       .expect(res => {
         res.body.data = Array.isArray(res.body.data);
@@ -28,15 +28,16 @@ describe('/api/transactions/all', () => {
       }, done);
   });
 
-  it('should return an array of transactions', function(done) {
+
+  it('should return an array of employees', function(done) {
     request(server)
-      .get('/api/transactions/all')
+      .get('/api/employees/all')
       .set('Accept', 'application/json')
       .expect(res => {
-        res.body.data = res.body.data[0].user_id
+        res.body.data = res.body.data[0].full_name.toLowerCase();
       })
       .expect(200, {
-        data: '58d580960a7d83fec3f5db6b'
+        data: 'kimberley malone'
       }, done);
   });
 });

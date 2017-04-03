@@ -16,7 +16,6 @@ if (process.env.NODE_ENV === 'production') {
     const cors = require('cors');
     const morgan = require('morgan');
     const compression = require('compression');
-
     const router = require('./server');
 
     const app = express();

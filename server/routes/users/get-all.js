@@ -7,6 +7,6 @@ module.exports = function getAllUsers(req, res) {
     if (err) {
       return res.json({ data: 'Database error, try again later' });
     }
-    res.json({ data: users });
+    return res.json({ data: users });
   });
 };

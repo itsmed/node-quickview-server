@@ -6,7 +6,7 @@ const Employee = mongoose.model('Employee', employeeSchema);
 module.exports = function getAllEmployees(req, res) {
   Employee.find((err, employees) => {
     if (err) {
-      return Employee.handleDatabaseError(err, res);
+      return res.json({ data : 'Database error, try again later' })
     }
     res.json({ data: employees });
   });

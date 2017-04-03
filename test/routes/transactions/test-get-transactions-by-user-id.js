@@ -1,6 +1,6 @@
 const request = require('supertest');
 
-describe('/api/transactions/id/:id', () => {
+describe('/api/transactions/user/id/:id', () => {
   let server;
   let db;
 
@@ -16,24 +16,24 @@ describe('/api/transactions/id/:id', () => {
     db.close();
   });
   
-  it('should return a single transaction record when passed a known id', (done) => {
+  it('should return a list of transactions when passed a known id', (done) => {
       request(server)
-        .get('/api/transactions/id/58dc8f69d769f4e31e911bad')
+        .get('/api/transactions/user/id/58d58096b44a13e78962a9a6')
         .set('Accept', 'application/json')
         .expect(res => {
-          res.body.data = res.body.data._id
+          res.body.data = Array.isArray(res.body.data)
         })
         .expect(200, {
-          data: '58dc8f69d769f4e31e911bad'
+          data: true
         }, done);
   });
 
-  it('should return null when passed an unknown id', (done) => {
+  it('should return an empty array when passed an unknown id', (done) => {
       request(server)
-        .get('/api/transactions/id/58df03977de4c44116c460d5')
+        .get('/api/transactions/user/id/58d58096db7fd098f3865631')
         .set('Accept', 'application/json')
         .expect(200, {
-          data: null
+          data: []
         }, done);
   });
 });

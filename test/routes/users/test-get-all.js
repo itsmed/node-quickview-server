@@ -2,19 +2,18 @@ const request = require('supertest');
 
 describe('/api/users/all', () => {
   let server;
-  let connection;
+  let db;
 
   beforeEach(() => {
     delete require.cache[require.resolve('../../../app')];
     delete require.cache[require.resolve('../../../server/db/db')];
     server = require('../../../app');
-    let { db } = require('../../../server/db/db');
-    connection = db.connection;
+    db = require('../../../server/db/db');
   });
 
   afterEach(() => {
     server.close();
-    connection.close();
+    db.close();
   });
 
   it('should return a json array', (done) => {

@@ -12,6 +12,8 @@ const {
   getTransactionsByUserId,
 } = require('./routes');
 
+const db = require('../server/db/db');
+
 module.exports = function(app) {
 
   /**************************************
