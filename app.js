@@ -1,5 +1,6 @@
 require('dotenv').config();
 const cluster = require('cluster');
+const db = require('./server/db/db');
 
 if (process.env.NODE_ENV === 'production') {
   if (cluster.isMaster) {

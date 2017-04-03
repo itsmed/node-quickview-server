@@ -9,6 +9,9 @@ const {
 const {
   getAllUsers,
   getSingleUser,
+  getUsersByEmail,
+  getUsersByPhone,
+  getUserByName,
 } = require('./users');
 
 const {
@@ -25,6 +28,9 @@ module.exports = {
   getEmployeesByPhone,
   getSingleEmployee,
   getAllUsers,
+  getUserByName,
+  getUsersByPhone,
+  getUsersByEmail,
   getSingleUser,
   getAllTransactions,
   getSingleTransaction,

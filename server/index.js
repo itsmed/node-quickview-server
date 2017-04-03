@@ -7,12 +7,13 @@ const {
   getEmployeesByPhone,
   getAllUsers,
   getSingleUser,
+  getUsersByEmail,
+  getUserByName,
+  getUsersByPhone,
   getAllTransactions,
   getSingleTransaction,
   getTransactionsByUserId,
 } = require('./routes');
-
-const db = require('../server/db/db');
 
 module.exports = function(app) {
 
@@ -21,6 +22,9 @@ module.exports = function(app) {
   **************************************/
   app.get('/api/users/all', getAllUsers);
   app.get('/api/users/id/:id', getSingleUser);
+  app.get('/api/users/search/email/:email', getUsersByEmail);
+  app.get('/api/users/search/name/:name', getUserByName);
+  app.get('/api/users/search/phone/:phone', getUsersByPhone);
 
   /**************************************
     /transaction routes
