@@ -92,7 +92,7 @@ describe('/transactions', () => {
       request(server)
         .get('/api/transactions/user/id/58d58096aaf1e4119144f41f')
         .set('Accept', 'application/json')
-        expect(res => {
+        .expect(res => {
           res.body.data = res.body.data.every(t => t.user_id === '58d58096aaf1e4119144f41f');
         })
         .expect(200, {
