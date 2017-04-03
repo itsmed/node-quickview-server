@@ -6,7 +6,7 @@ const Transaction = mongoose.model('Transaction', transactionSchema);
 module.exports = function getAllTransactions(req, res) {
   Transaction.find((err, transactions) => {
     if (err) {
-      return Transaction.handleDatabaseError(err, res);
+      return res.json({ data: 'Database error, try again later' });
     }
     res.json({ data: transactions });
   });
