@@ -5,6 +5,6 @@ const connectionUrl = process.env.NODE_ENV === 'development' ?
 
 const db = mongoose.connect(connectionUrl);
 
-module.exports ={
+module.exports = {
   db
 };
