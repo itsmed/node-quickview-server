@@ -29,6 +29,7 @@ describe('/api/users/all', () => {
       }, done);
   });
 
+
   it('should return an array of users', function(done) {
     request(server)
       .get('/api/users/all')

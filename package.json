@@ -6,7 +6,7 @@
   "scripts": {
     "start:dev": "NODE_ENV='development' nodemon app.js",
     "test": "NODE_ENV='development' nyc --reporter=html --reporter=text mocha test/**/*.js",
-    "test:watch": "NODE_ENV='development' nyc --reporter=html --reporter=text mocha test/**/*.js --watch"
+    "test:watch": "NODE_ENV='development' nodemon ./node_modules/nyc/bin/nyc.js --reporter=html --reporter=text mocha test/**/*.js --watch"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
     "nyc": "^10.2.0",
     "supertest": "^3.0.0"
   }
