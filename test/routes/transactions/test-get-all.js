@@ -1,6 +1,6 @@
 const request = require('supertest');
 
-describe('/api/users/id/:id', () => {
+describe('/api/transactions/all', () => {
   let server;
   let connection;
 
@@ -17,24 +17,27 @@ describe('/api/users/id/:id', () => {
     connection.close();
   });
 
-  it('should return an object when passed a known id', (done) => {
+  it('should return an array', function(done) {
     request(server)
-      .get('/api/users/id/58df03977de4c44116c460cf')
+      .get('/api/transactions/all')
       .set('Accept', 'application/json')
       .expect(res => {
-        res.body.data = res.body.data.full_name.toLowerCase();
+        res.body.data = Array.isArray(res.body.data);
       })
       .expect(200, {
-        data: 'Jan Sparks'.toLowerCase()
+        data: true
       }, done);
   });
 
-  it('should return null when passed an unknown id', (done) => {
+  it('should return an array of transactions', function(done) {
     request(server)
-      .get('/api/users/id/58d5809697c7c1a23244f8a4')
+      .get('/api/transactions/all')
       .set('Accept', 'application/json')
+      .expect(res => {
+        res.body.data = res.body.data[0].user_id
+      })
       .expect(200, {
-        data: null
+        data: '58d580960a7d83fec3f5db6b'
       }, done);
   });
 });
