@@ -44,8 +44,12 @@ if (process.env.NODE_ENV === 'production') {
   const router = require('./server');
 
   const app = express();
+  app.use(express.static(path.resolve(__dirname, 'server', 'static')));
   app.use(morgan('dev'));
   app.use(cors());
+  app.use(bodyParser.urlencoded({
+    extended: true
+  }));
   app.use(bodyParser.json());
   app.use(compression());
 

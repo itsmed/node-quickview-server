@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>temp</title>
+</head>
+<body>
+<button id="loader">Load</button>
+<button id="saver">Save</button>
+<div id="app">This is a test api server!</div>
+<script type="text/javascript" src="./jquery/dist/jquery.min.js"></script>
+<script>
+  var allData;
+  var newData;
+  $(document).ready(() => {
+    console.log('hello');
+
+    $('#loader').click(loadData);
+
+    $('#saver').click(saveData);
+  });
+
+  function loadData() {
+    $.get('/api/transactions/all', ({data}) => {
+      
+      allData = data;
+      newData = allData.map(user => {
+        return Object.assign({}, user, {
+          amount: fixBalance(user.amount)
+        });
+      });
+      $('#app').html(JSON.stringify(newData, null, 3));
+    });
+  }
+
+  function saveData() {
+    $.post('/api/users/save', {data: newData} )
+      .done(function(res) {
+        console.log('fucking work', res);
+      })
+      .fail(function(err) {
+        console.log('fucking failed', err);
+      })
+      .always(function() {
+        console.log('say it is over');
+      });
+  }
+
+  function fixBalance(str) {
+    return parseFloat(str.replace('$', '').replace(',', ''));
+  }
+
+  function fixPhoneNumber(str) {
+    return str.replace('+', '').replace('(', '').replace(')', '').replace(' ', '').replace('-', '').replace(' ', '');
+  }
+</script>
+</body>
+</html>
