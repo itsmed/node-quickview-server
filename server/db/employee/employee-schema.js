@@ -10,7 +10,7 @@ const employeeSchema = mongoose.Schema({
   },
   "company": String,
   "email": String,
-  "phone": String,
+  "phone": Number,
   "permissions": Number,
   "full_name": String
 });

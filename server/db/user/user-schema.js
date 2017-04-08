@@ -5,7 +5,7 @@ const userSchema = mongoose.Schema({
   "index": Number,
   "guid": String,
   "isActive": Boolean,
-  "balance": String,
+  "balance": Number,
   "picture": String,
   "name": {
     "first": String,
@@ -13,7 +13,7 @@ const userSchema = mongoose.Schema({
   },
   "company": String,
   "email": String,
-  "phone": String,
+  "phone": Number,
   "address": String,
   "about": String,
   "registered": String,
