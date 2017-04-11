@@ -2,6 +2,19 @@ require('dotenv').config();
 const cluster = require('cluster');
 const db = require('./server/db/db');
 
+const memwatch = require('memwatch-next');
+
+memwatch.on('leak', (info) => {
+  console.log('LEAKING!');
+  console.log(info);
+});
+
+memwatch.on('stats', (stats) => {
+  console.log('STATS:', stats);
+});
+
+
+
 if (process.env.NODE_ENV === 'production') {
   if (cluster.isMaster) {
     const cpuCount = 3;

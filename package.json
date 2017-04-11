@@ -21,6 +21,7 @@
     "fs": "0.0.1-security",
     "jquery": "^3.2.1",
     "jwt-simple": "^0.5.1",
+    "memwatch-next": "^0.3.0",
     "mongoose": "^4.9.2",
     "morgan": "^1.8.1",
     "passport": "^0.3.2",
