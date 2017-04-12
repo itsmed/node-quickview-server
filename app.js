@@ -30,10 +30,15 @@ if (process.env.NODE_ENV === 'production') {
     const cors = require('cors');
     const morgan = require('morgan');
     const compression = require('compression');
+    const expressSession = require('express-session');
+    
     const router = require('./server');
 
     const app = express();
     app.use(morgan('dev'));
+    app.use(expressSession({
+      secret: process.env.sessionSecret
+    }));
     app.use(cors());
     app.use(bodyParser.json());
     app.use(compression());
@@ -53,12 +58,16 @@ if (process.env.NODE_ENV === 'production') {
   const cors = require('cors');
   const morgan = require('morgan');
   const compression = require('compression');
+  const expressSession = require('express-session');
 
   const router = require('./server');
 
   const app = express();
-  app.use(express.static(path.resolve(__dirname, 'server', 'static')));
+
   app.use(morgan('dev'));
+  app.use(expressSession({
+    secret: process.env.sessionSecret
+  }));
   app.use(cors());
   app.use(bodyParser.urlencoded({
     extended: true
