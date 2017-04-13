@@ -8,7 +8,8 @@ const authenticatedUser = mongoose.Schema({
   password: {
     type: String,
     required: true
-  }
+  },
+  permissions: Number
 });
 
 module.exports = authenticatedUser;
