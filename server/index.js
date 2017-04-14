@@ -14,8 +14,15 @@ const {
   getSingleTransaction,
   getTransactionsByUserId,
 } = require('./routes');
+const path = require('path');
+const authentication = require('./controllers/authentication');
 
 module.exports = function(app) {
+  /**************************************
+    /auth routes
+  **************************************/
+  app.post('/api/auth/signup', authentication.signup);
+  app.post('/api/auth/signin', authentication.signin);
 
   /**************************************
     /users routes
@@ -43,4 +50,6 @@ module.exports = function(app) {
   app.get('/api/employees/search/permissions/:permissions', getEmployeesByPermissions);
   app.get('/api/employees/search/email/:email', getEmployeesByEmail);
   app.get('/api/employees/search/phone/:phone', getEmployeesByPhone);
+
+  app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'static', 'index.html')));
 }
