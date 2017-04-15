@@ -88,5 +88,12 @@ exports.checkUserToken = function(req, res, next) {
   }
 
   const token = jwt.decode(authorization, process.env.TOKEN_SECRET);
-  next(token);
+  if (!token) {
+    res.json({ error: 'Unauthorized' });
+    return;
+  }
+  if (token.permissions && token.permissions > 0) {
+    console.log('TOKEN', token);
+    next();
+  }
 };

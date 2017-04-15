@@ -8,6 +8,7 @@
 <input type="text" name="password" placeholder="password" id="password" />
 <button id="loader">access</button>
 <button id="saver">sign in</button>
+<button id="signout">sign out</button>
 <div id="app">This is a test api server!</div>
 <!-- <script type="text/javascript" src="./jquery/dist/jquery.min.js"></script> -->
 <!-- <script>
@@ -59,12 +60,13 @@
 <script>
   var loader = document.getElementById('loader');
   var saver = document.getElementById('saver');
+  var signer = document.getElementById('signout');
   var app = document.getElementById('app');
 
-  let token = localStorage.getItem('token');
 
 
   loader.addEventListener('click', () => {
+    let token = localStorage.getItem('token');
       console.log('token', token);
     if (token) {
       axios.defaults.headers.common['Authorization'] = token;
@@ -76,7 +78,7 @@
     .then(res => {
       console.log('things worked', res);
       console.log('i mean i thought it worked', axios.defaults)
-      app.textContent = JSON.stringify(res, null, 2)
+      app.textContent = JSON.stringify(res.data, null, 2)
     })
     .catch(err => {
       console.log('error in front', err);
@@ -94,6 +96,17 @@
     localStorage.setItem('token', res.data.token);
   })
   .catch(err => app.textContent = err.message));
+
+  signer.addEventListener('click', () => {
+    if(localStorage.getItem('token')) {
+      localStorage.removeItem('token');
+    }
+    app.textContent = 'Signed out';
+
+    return setTimeout(() => {
+      app.textContent = '';
+    }, 2000);
+  });
 
 </script>
 </body>
