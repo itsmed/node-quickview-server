@@ -10,6 +10,8 @@
 <button id="saver">sign in</button>
 <button id="signout">sign out</button>
 <div id="app">This is a test api server!</div>
+<div id="app2"></div>
+<div id="app3"></div>
 <!-- <script type="text/javascript" src="./jquery/dist/jquery.min.js"></script> -->
 <!-- <script>
   var allData;
@@ -67,18 +69,19 @@
 
   loader.addEventListener('click', () => {
     let token = localStorage.getItem('token');
-      console.log('token', token);
+      
     if (token) {
       axios.defaults.headers.common['Authorization'] = token;
     } else {
       axios.defaults.headers.common['Authorization'] = null;
     }
-    console.log('headers', axios.defaults.headers.common['Authorization']);
+    
     axios.get('/api/fake/protected')
     .then(res => {
-      console.log('things worked', res);
-      console.log('i mean i thought it worked', axios.defaults)
-      app.textContent = JSON.stringify(res.data, null, 2)
+      app.innerHTML = '<h1>Employees</h1> <div>' + JSON.stringify(res.data.employees, null, 2) + '</div>';
+      app2.innerHTML = '<h1>Transactions</h1> <div>' + JSON.stringify(res.data.transactions, null, 2) + '</div>';
+      console.log(res.data.employees.length);
+      app3.innerHTML = '<h1>Users</h1> <div>' + JSON.stringify(res.data.users, null, 2) + '</div>';
     })
     .catch(err => {
       console.log('error in front', err);
