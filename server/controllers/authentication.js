@@ -50,7 +50,6 @@ exports.signup = function(req, res, next) {
         console.log('saving failed');
         return next(err);
       }
-      console.log('all good!', user, tokenForUser(user));
       res.send({ token: tokenForUser(user) });
     })
   });
@@ -59,7 +58,6 @@ exports.signup = function(req, res, next) {
 exports.signin = function(req, res, next) {
   const { username, password } = req.body;
 
-  console.log('userame', username, password);
   AuthenticatedUser.findOne({ username }, (err, existingUser) => {
     if (err) {
       res.status(422).send({ error: 'Database error, please try again later.' });
@@ -81,17 +79,14 @@ exports.signin = function(req, res, next) {
 };
 
 exports.checkUserToken = function(req, res, next) {
-  // console.log('maybe', req.headers.authorization);
+  
   const { authorization } = req.headers;
-  // console.log(authorization);
+
   if (!authorization) {
     res.json({ error: 'Unauthorized' });
     return;
   }
 
-  
-
   const token = jwt.decode(authorization, process.env.TOKEN_SECRET);
-  console.log('token!', token);
-  next();
+  next(token);
 };
