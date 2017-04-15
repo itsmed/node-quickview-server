@@ -1,18 +1,17 @@
 const mongoose = require('mongoose');
 
 const employeeSchema = mongoose.Schema({
-  "id": String,
+  "empId": String,
   "index": Number,
-  "guid": String,
+  "isActive": Boolean,
+  picture: String,
   "name": {
     "first": String,
     "last": String
   },
   "company": String,
   "email": String,
-  "phone": Number,
-  "permissions": Number,
-  "full_name": String
+  "permissions": Number
 });
 
 module.exports = employeeSchema;
