@@ -34,10 +34,10 @@ describe('/api/employees/all', () => {
       .get('/api/employees/all')
       .set('Accept', 'application/json')
       .expect(res => {
-        res.body.data = res.body.data[0].full_name.toLowerCase();
+        res.body.data = res.body.data[0].name.last.toLowerCase();
       })
       .expect(200, {
-        data: 'kimberley malone'
+        data: 'carroll'
       }, done);
   });
 });
