@@ -51,7 +51,7 @@ exports.signup = function(req, res, next) {
         return next(err);
       }
       console.log('all good!', user, tokenForUser(user));
-      res.json({ token: tokenForUser(user) });
+      res.send({ token: tokenForUser(user) });
     })
   });
 };
@@ -80,3 +80,18 @@ exports.signin = function(req, res, next) {
   });
 };
 
+exports.checkUserToken = function(req, res, next) {
+  // console.log('maybe', req.headers.authorization);
+  const { authorization } = req.headers;
+  // console.log(authorization);
+  if (!authorization) {
+    res.json({ error: 'Unauthorized' });
+    return;
+  }
+
+  
+
+  const token = jwt.decode(authorization, process.env.TOKEN_SECRET);
+  console.log('token!', token);
+  next();
+};

@@ -6,8 +6,8 @@
 <body>
 <input type="text" name="username" placeholder="username" id="username" />
 <input type="text" name="password" placeholder="password" id="password" />
-<button id="loader">Load</button>
-<button id="saver">Save</button>
+<button id="loader">access</button>
+<button id="saver">sign in</button>
 <div id="app">This is a test api server!</div>
 <!-- <script type="text/javascript" src="./jquery/dist/jquery.min.js"></script> -->
 <!-- <script>
@@ -61,22 +61,38 @@
   var saver = document.getElementById('saver');
   var app = document.getElementById('app');
 
-  loader.addEventListener('click', () => axios.get('/api/users/all')
-    .then(users => {
-      console.log('things worked', users);
-      app.textContent = JSON.stringify(users, null, 2)
+  let token = localStorage.getItem('token');
+
+
+  loader.addEventListener('click', () => {
+      console.log('token', token);
+    if (token) {
+      axios.defaults.headers.common['Authorization'] = token;
+    } else {
+      axios.defaults.headers.common['Authorization'] = null;
+    }
+    console.log('headers', axios.defaults.headers.common['Authorization']);
+    axios.get('/api/fake/protected')
+    .then(res => {
+      console.log('things worked', res);
+      console.log('i mean i thought it worked', axios.defaults)
+      app.textContent = JSON.stringify(res, null, 2)
     })
     .catch(err => {
       console.log('error in front', err);
       app.textContent = err.message
-    }));
+    })
+  });
 
 
   saver.addEventListener('click', () => axios.post('/api/auth/signin', {
     username: document.getElementById('username').value,
     password: document.getElementById('password').value
   })
-  .then(res => app.textContent = JSON.stringify(res, null, 2))
+  .then(res => {
+    app.textContent = JSON.stringify(res, null, 2)
+    localStorage.setItem('token', res.data.token);
+  })
   .catch(err => app.textContent = err.message));
 
 </script>

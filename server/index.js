@@ -23,6 +23,10 @@ module.exports = function(app) {
   **************************************/
   app.post('/api/auth/signup', authentication.signup);
   app.post('/api/auth/signin', authentication.signin);
+  app.get('/api/fake/protected', authentication.checkUserToken, (req, res) => {
+    // console.log('inside cabllebak', req.headers);
+    res.send("ok")
+  });
 
   /**************************************
     /users routes
