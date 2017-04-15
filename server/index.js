@@ -27,7 +27,7 @@ module.exports = function(app) {
   /**************************************
     /users routes
   **************************************/
-  app.get('/api/users/all', getAllUsers);
+  app.get('/api/users/all', authentication.checkUserToken, getAllUsers);
   app.get('/api/users/id/:id', getSingleUser);
   app.get('/api/users/search/email/:email', getUsersByEmail);
   app.get('/api/users/search/name/:name', getUserByName);

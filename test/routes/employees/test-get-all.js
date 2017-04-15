@@ -21,6 +21,7 @@ describe('/api/employees/all', () => {
       .get('/api/employees/all')
       .set('Accept', 'application/json')
       .expect(res => {
+        console.log('body: ', res.body);
         res.body.data = Array.isArray(res.body.data);
       })
       .expect(200, {

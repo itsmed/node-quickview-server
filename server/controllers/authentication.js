@@ -28,12 +28,10 @@ exports.signup = function(req, res, next) {
   
   AuthenticatedUser.findOne({ username }, function(err, existingUser) {
     if (err) {
-      console.log('error finding', err);
       return next(err);
     }
 
     if (existingUser) {
-      console.log('someone is in there?', existingUser);
       res.status(422).send({ error: 'Username in use.' });
     }
 
@@ -47,7 +45,6 @@ exports.signup = function(req, res, next) {
 
     user.save(function(err) {
       if (err) {
-        console.log('saving failed');
         return next(err);
       }
       res.send({ token: tokenForUser(user) });
@@ -93,7 +90,6 @@ exports.checkUserToken = function(req, res, next) {
     return;
   }
   if (token.permissions && token.permissions > 0) {
-    console.log('TOKEN', token);
     next();
   }
 };
