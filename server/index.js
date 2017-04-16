@@ -30,26 +30,26 @@ module.exports = function(app) {
   app.get('/api/users/all', authentication.checkUserToken, getAllUsers);
   app.get('/api/users/id/:id', authentication.checkUserToken, getSingleUser);
   app.get('/api/users/search/email/:email', authentication.checkUserToken, getUsersByEmail);
-  app.get('/api/users/search/name/:name', getUserByName);
-  app.get('/api/users/search/phone/:phone', getUsersByPhone);
+  app.get('/api/users/search/name/:name', authentication.checkUserToken,  getUserByName);
+  app.get('/api/users/search/phone/:phone', authentication.checkUserToken,  getUsersByPhone);
 
   /**************************************
     /transaction routes
   **************************************/
 
-  app.get('/api/transactions/all', getAllTransactions);
-  app.get('/api/transactions/id/:id', getSingleTransaction)
-  app.get('/api/transactions/user/id/:id', getTransactionsByUserId);
+  app.get('/api/transactions/all', authentication.checkUserToken,  getAllTransactions);
+  app.get('/api/transactions/id/:id', authentication.checkUserToken,  getSingleTransaction)
+  app.get('/api/transactions/user/id/:id', authentication.checkUserToken,  getTransactionsByUserId);
 
   /**************************************
     /employee routes
   **************************************/
-  app.get('/api/employees/all', getAllEmployees);
-  app.get('/api/employees/id/:id', getSingleEmployee);
-  app.get('/api/employees/search/name/:name', getEmployeeByName);
-  app.get('/api/employees/search/permissions/:permissions', getEmployeesByPermissions);
-  app.get('/api/employees/search/email/:email', getEmployeesByEmail);
-  app.get('/api/employees/search/phone/:phone', getEmployeesByPhone);
+  app.get('/api/employees/all', authentication.checkUserToken,  getAllEmployees);
+  app.get('/api/employees/id/:id', authentication.checkUserToken,  getSingleEmployee);
+  app.get('/api/employees/search/name/:name', authentication.checkUserToken,  getEmployeeByName);
+  app.get('/api/employees/search/permissions/:permissions', authentication.checkUserToken,  getEmployeesByPermissions);
+  app.get('/api/employees/search/email/:email', authentication.checkUserToken,  getEmployeesByEmail);
+  app.get('/api/employees/search/phone/:phone', authentication.checkUserToken,  getEmployeesByPhone);
 
   app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'static', 'index.html')));
 }
