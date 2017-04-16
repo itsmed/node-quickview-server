@@ -19,7 +19,7 @@ describe('/users', () => {
       })
       .end((err, res) => {
         if(err) {
-          
+          console.log('err', err.message);
           d(err.message);
         }
         token = res.body.token;
@@ -37,10 +37,11 @@ describe('/users', () => {
 
 
   describe('/api/users/id/:id', () => {
-    it('shold return a user record when passed a known userId', (done) => {
+    it('should return a user record when passed a known userId', (done) => {
       request(server)
         .get('/api/users/id/7a5704d7-c44a-4795-aa06-a3c7b6218f8b')
         .set('Accept', 'application/json')
+        .set('Authorization', token)
         .expect(res => {
           res.body.data = res.body.data.name.first.toLowerCase();
         })
@@ -53,6 +54,7 @@ describe('/users', () => {
       request(server)
         .get('/api/users/id/7a5704d7-c44a-95-aa06-a3c7b6218f8b')
         .set('Accept', 'application/json')
+        .set('Authorization', token)
         .expect(200, {
           data: null
         }, done);
@@ -62,6 +64,7 @@ describe('/users', () => {
       request(server)
         .get('/api/users/id/82jsl89snfklw')
         .set('Accept', 'application/json')
+        .set('Authorization', token)
         .expect(200, {
           data: null
         }, done);

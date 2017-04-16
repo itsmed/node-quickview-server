@@ -28,8 +28,8 @@ module.exports = function(app) {
     /users routes
   **************************************/
   app.get('/api/users/all', authentication.checkUserToken, getAllUsers);
-  app.get('/api/users/id/:id', getSingleUser);
-  app.get('/api/users/search/email/:email', getUsersByEmail);
+  app.get('/api/users/id/:id', authentication.checkUserToken, getSingleUser);
+  app.get('/api/users/search/email/:email', authentication.checkUserToken, getUsersByEmail);
   app.get('/api/users/search/name/:name', getUserByName);
   app.get('/api/users/search/phone/:phone', getUsersByPhone);
 

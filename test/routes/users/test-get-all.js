@@ -1,7 +1,5 @@
 const request = require('supertest');
 
-const getToken = require('../../helpers/get-token');
-
 describe('/api/users/all', () => {
   let server;
   let db;
