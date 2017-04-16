@@ -3,48 +3,67 @@ const request = require('supertest');
 describe('/users', () => {
   let server;
   let db;
+  let token;
 
-  beforeEach(() => {
+  beforeEach((d) => {
     delete require.cache[require.resolve('../../../app')];
     delete require.cache[require.resolve('../../../server/db/db')];
+    
     server = require('../../../app');
     db = require('../../../server/db/db');
+    request(server)
+      .post('/api/auth/signin')
+      .send({
+        username: 'test1',
+        password: 'test'
+      })
+      .end((err, res) => {
+        if(err) {
+          
+          d(err.message);
+        }
+        token = res.body.token;
+
+        res.body = {data: res.body.token === null};
+        d();
+      })
   });
 
   afterEach(() => {
     server.close();
     db.close();
+    token = null ;
   });
 
 
   describe('/api/users/id/:id', () => {
-    it('shold return a user record when passed a known id', (done) => {
+    it('shold return a user record when passed a known userId', (done) => {
       request(server)
-        .get('/api/users/id/58df03977de4c44116c460cf')
+        .get('/api/users/id/7a5704d7-c44a-4795-aa06-a3c7b6218f8b')
         .set('Accept', 'application/json')
         .expect(res => {
-          res.body.data = res.body.data.full_name.toLowerCase();
+          res.body.data = res.body.data.name.first.toLowerCase();
         })
         .expect(200, {
-          data: 'Jan Sparks'.toLowerCase()
+          data: 'Michele'.toLowerCase()
         }, done);
     });
 
-    it('should return null when passed an unknown id', (done) => {
+    it('should return null when passed an unknown userId', (done) => {
       request(server)
-        .get('/api/users/id/58d5809697c7c1a23244f8a4')
+        .get('/api/users/id/7a5704d7-c44a-95-aa06-a3c7b6218f8b')
         .set('Accept', 'application/json')
         .expect(200, {
           data: null
         }, done);
     });
 
-    it('should gracefully handle an error', (done) => {
+    it('should return null when passed an unkown userId', (done) => {
       request(server)
-        .get('/api/users/id/f9s')
+        .get('/api/users/id/82jsl89snfklw')
         .set('Accept', 'application/json')
         .expect(200, {
-          data: 'Database error, try again later'
+          data: null
         }, done);
     });
   });

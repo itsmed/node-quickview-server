@@ -1,5 +1,6 @@
 const request = require('supertest');
-const axios = require('axios');
+
+const getToken = require('../../helpers/get-token');
 
 describe('/api/users/all', () => {
   let server;
@@ -19,7 +20,10 @@ describe('/api/users/all', () => {
         password: 'test'
       })
       .end((err, res) => {
-        if(err) { console.log('EERRRE', err.message); }
+        if(err) {
+          
+          d(err.message);
+        }
         token = res.body.token;
 
         res.body = {data: res.body.token === null};
@@ -40,7 +44,6 @@ describe('/api/users/all', () => {
       .set('Accept', 'application/json')
       .set('Authorization', token)
       .expect(res => {
-        console.log('token', token);
         res.body.data = res === null
       })
       .expect(200, {
