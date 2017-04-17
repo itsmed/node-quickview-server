@@ -5,6 +5,7 @@ const Employee = mongoose.model('Employee', employeeSchema);
 
 module.exports = function getEmployeesByEmail(req, res) {
   let email = new RegExp(req.params.email);
+  console.log('email', email);
   Employee.find({'email': {$regex: req.params.email}}, (err, employees) => {
     if (err) {
       return res.json({ data : 'Database error, try again later' })

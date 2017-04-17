@@ -4,7 +4,7 @@ const employeeSchema = require('../../db/employee/employee-schema');
 const Employee = mongoose.model('Employee', employeeSchema);
 
 module.exports = function getSingleEmployee(req, res) {
-  Employee.findOne({ '_id': req.params.id}, (err, employee) => {
+  Employee.findOne({ 'empId': req.params.id}, (err, employee) => {
     if (err) {
       return res.json({ data : 'Database error, try again later' })
     }
