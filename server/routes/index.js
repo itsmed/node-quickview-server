@@ -4,13 +4,11 @@ const {
   getEmployeesByEmail,
   getEmployeeByName,
   getEmployeesByPermissions,
-  getEmployeesByPhone,
 } = require('./employees');
 const {
   getAllUsers,
   getSingleUser,
   getUsersByEmail,
-  getUsersByPhone,
   getUserByName,
 } = require('./users');
 
@@ -25,11 +23,9 @@ module.exports = {
   getEmployeesByEmail,
   getEmployeeByName,
   getEmployeesByPermissions,
-  getEmployeesByPhone,
   getSingleEmployee,
   getAllUsers,
   getUserByName,
-  getUsersByPhone,
   getUsersByEmail,
   getSingleUser,
   getAllTransactions,

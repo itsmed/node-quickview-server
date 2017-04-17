@@ -13,7 +13,6 @@ const userSchema = mongoose.Schema({
   },
   "company": String,
   "email": String,
-  "phone": Number,
   "address": String,
   "about": String,
   "registered": String,

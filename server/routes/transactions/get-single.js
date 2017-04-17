@@ -4,7 +4,7 @@ const transactionSchema = require('../../db/transaction/transaction-schema');
 const Transaction = mongoose.model('Transaction', transactionSchema);
 
 module.exports = function getSingleTransaction(req, res) {
-  Transaction.findOne({ '_id': req.params.id}, (err, transaction) => {
+  Transaction.findOne({ 't_id': req.params.id}, (err, transaction) => {
     if (err) {
       return res.json({ data: 'Database error, try again later' });
     }

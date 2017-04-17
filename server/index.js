@@ -31,7 +31,6 @@ module.exports = function(app) {
   app.get('/api/users/id/:id', authentication.checkUserToken, getSingleUser);
   app.get('/api/users/search/email/:email', authentication.checkUserToken, getUsersByEmail);
   app.get('/api/users/search/name/:name', authentication.checkUserToken,  getUserByName);
-  app.get('/api/users/search/phone/:phone', authentication.checkUserToken,  getUsersByPhone);
 
   /**************************************
     /transaction routes
@@ -49,7 +48,6 @@ module.exports = function(app) {
   app.get('/api/employees/search/name/:name', authentication.checkUserToken,  getEmployeeByName);
   app.get('/api/employees/search/permissions/:permissions', authentication.checkUserToken,  getEmployeesByPermissions);
   app.get('/api/employees/search/email/:email', authentication.checkUserToken,  getEmployeesByEmail);
-  app.get('/api/employees/search/phone/:phone', authentication.checkUserToken,  getEmployeesByPhone);
 
   app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'static', 'index.html')));
 }

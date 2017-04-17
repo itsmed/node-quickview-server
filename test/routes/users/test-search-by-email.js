@@ -37,7 +37,7 @@ describe('/api/users/search/email/:email', () => {
   
   it('should return an array of user records when passed a known email', (done) => {
       request(server)
-        .get('/api/users/search/email/Horton.Cote@Mobildata.com')
+        .get('/api/users/search/email/horton.cote@mobildata.com')
         .set('Accept', 'application/json')
         .set('Authorization', token)
         .expect(res => {
