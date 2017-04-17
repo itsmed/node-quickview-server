@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-const userSchema = require('../../db/user/user-schema');
-const User = mongoose.model('User', userSchema);
+const User = require('../../db/user/user-schema');
 
 module.exports = function getSingleUser(req, res) {
   User.findOne({ 'userId': req.params.id}, (err, user) => {

@@ -14,4 +14,4 @@ const employeeSchema = mongoose.Schema({
   "permissions": Number
 });
 
-module.exports = employeeSchema;
+module.exports = mongoose.model('employee', employeeSchema);

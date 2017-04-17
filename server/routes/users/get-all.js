@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-const userSchema = require('../../db/user/user-schema');
-const User = mongoose.model('User', userSchema);
+const User = require('../../db/user/user-schema');
 
 module.exports = function getAllUsers(req, res) {
   User.find((err, users) => {

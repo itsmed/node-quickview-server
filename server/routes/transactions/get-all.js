@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
-const transactionSchema = require('../../db/transaction/transaction-schema');
-const Transaction = mongoose.model('Transaction', transactionSchema);
+const Transaction = require('../../db/transaction/transaction-schema');
 
 module.exports = function getAllTransactions(req, res) {
   Transaction.find((err, transactions) => {

@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
-const employeeSchema = require('../../db/employee/employee-schema');
-const Employee = mongoose.model('Employee', employeeSchema);
+const Employee = require('../../db/employee/employee-schema');
 
 module.exports = function getEmployeesByPermissions(req, res) {
   Employee.find({ 'permissions': req.params.permissions }, (err, employees) => {

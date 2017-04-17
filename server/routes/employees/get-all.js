@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
-const employeeSchema = require('../../db/employee/employee-schema');
-const Employee = mongoose.model('employee', employeeSchema);
+const Employee = require('../../db/employee/employee-schema');
 
 module.exports = function getAllEmployees(req, res) {
   console.log('GETTING ALL EMPLOYEES!!!!!!!!!!!!!');
