@@ -53,20 +53,26 @@ exports.signup = function(req, res, next) {
 };
 
 exports.signin = function(req, res, next) {
+  console.log(req.body);
   const { username, password } = req.body;
 
   AuthenticatedUser.findOne({ username }, (err, existingUser) => {
     if (err) {
-      res.status(422).send({ error: 'Database error, please try again later.' });
+      return res.status(422).send({ error: 'Database error, please try again later.' });
+    }
+
+    if (!existingUser) {
+      console.log('\n\n\n\nfailued ro find user\n\n\n\n');
+      return res.status(422).send({ error: 'Not Found' });
     }
     const hash = existingUser.password;
 
     bcrypt.compare(password, hash, function(error, isMatch) {
       if (err) {
-        res.status(422).send({ error: 'Database error, please try again later.' });
+        return res.status(422).send({ error: 'Database error, please try again later.' });
       }
       if (!isMatch) {
-        res.send({ message: 'No user found with those credentials.' });
+        return res.send({ message: 'No user found with those credentials.' });
       }
       else {
         res.json({ token: tokenForUser(existingUser) });
