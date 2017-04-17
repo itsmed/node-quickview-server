@@ -76,11 +76,10 @@
       axios.defaults.headers.common['Authorization'] = null;
     }
     
-    axios.get('/api/fake/protected')
+    axios.get('/api/users/all')
     .then(res => {
-      app.innerHTML = '<h1>Employees</h1> <div>' + JSON.stringify(res.data.employees, null, 2) + '</div>';
-      app2.innerHTML = '<h1>Transactions</h1> <div>' + JSON.stringify(res.data.transactions, null, 2) + '</div>';
-      console.log(res.data.employees.length);
+      
+      console.log(res.data.length);
       app3.innerHTML = '<h1>Users</h1> <div>' + JSON.stringify(res.data.users, null, 2) + '</div>';
     })
     .catch(err => {

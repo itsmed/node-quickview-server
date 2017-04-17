@@ -2,11 +2,21 @@ require('dotenv').config();
 const cluster = require('cluster');
 const db = require('./server/db/db');
 
-const memwatch = require('memwatch-next');
+const PORT = process.env.PORT || 3000;
 
+const memwatch = require('memwatch-next');
+let hd;
 memwatch.on('leak', (info) => {
   console.log('LEAKING!');
   console.log(info);
+
+  if (!hd) {
+    hd = new memwatch.HeapDiff();
+  } else {
+    let diff = hd.end();
+    console.error(util.inpsect(diff, true, null));
+    hd = null;
+  }
 });
 
 memwatch.on('stats', (stats) => {
@@ -41,12 +51,13 @@ if (process.env.NODE_ENV === 'production') {
 
     router(app);
 
-    const server = app.listen(3000, () => console.log('App listening on port 3000'));
+    const server = app.listen(PORT, () => console.log('App listening on port 3000'));
 
     module.exports = server;
   }
 
-} else {
+} 
+else {
   const express = require('express');
   const bodyParser = require('body-parser');
   const path = require('path');
@@ -61,10 +72,10 @@ if (process.env.NODE_ENV === 'production') {
 
   app.use(morgan('dev'));
   app.use(cors());
+  app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({
     extended: true
   }));
-  app.use(bodyParser.json());
   app.use(compression());
 
   router(app);
