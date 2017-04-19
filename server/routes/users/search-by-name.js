@@ -6,8 +6,8 @@ module.exports = function getUserByName(req, res) {
   let name = new RegExp(req.params.name);
   User.find({'full_name': {$regex: req.params.name}}, (err, employees) => {
     if (err) {
-      return res.json({ data: 'Database error, try again later' });
+      return res.json('Database error, try again later');
     }
-    res.json({ data: employees });
+    res.json(employees);
   });
 }

@@ -78,7 +78,7 @@
     
     axios.get('/api/users/all')
     .then(res => {
-      
+      console.log('res', res);
       console.log(res.data.length);
       app3.innerHTML = '<h1>Users</h1> <div>' + JSON.stringify(res.data.users, null, 2) + '</div>';
     })

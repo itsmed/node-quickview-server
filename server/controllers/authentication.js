@@ -84,7 +84,7 @@ exports.signin = function(req, res, next) {
 exports.checkUserToken = function(req, res, next) {
   
   const { authorization } = req.headers;
-
+  // console.log('trying!', authorization, req.hea);
   if (!authorization) {
     res.json({ error: 'Unauthorized' });
     return;

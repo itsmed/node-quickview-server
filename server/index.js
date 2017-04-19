@@ -49,5 +49,5 @@ module.exports = function(app) {
   app.get('/api/employees/permissions/:permissions', authentication.checkUserToken,  getEmployeesByPermissions);
   app.get('/api/employees/email/:email', authentication.checkUserToken,  getEmployeesByEmail);
 
-  app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'static', 'index.html')));
+  // app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'static', 'index.html')));
 }
