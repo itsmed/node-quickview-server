@@ -1,4 +1,5 @@
 const request = require('supertest');
+const { expect } = require('chai');
 
 describe('/api/transactions/all', () => {
   let server;
@@ -40,12 +41,10 @@ describe('/api/transactions/all', () => {
       .get('/api/transactions/all')
       .set('Accept', 'application/json')
       .set('Authorization', token)
-      .expect(res => {
-        res.body.data = Array.isArray(res.body.data);
-      })
-      .expect(200, {
-        data: true
-      }, done);
+      .then(res => {
+        expect(Array.isArray(res.body)).to.equal(true);
+        done();
+      });
   });
 
   it('should return an array of transactions', function(done) {
@@ -53,11 +52,9 @@ describe('/api/transactions/all', () => {
       .get('/api/transactions/all')
       .set('Accept', 'application/json')
       .set('Authorization', token)
-      .expect(res => {
-        res.body.data = res.body.data[0].user_id
-      })
-      .expect(200, {
-        data: '6db4775a-d4b5-4990-baf7-e6f2dc21df32'
-      }, done);
+      .then(res => {
+        expect(res.body[0].user_id).to.equal('6db4775a-d4b5-4990-baf7-e6f2dc21df32');
+        done();
+      });
   });
 });
