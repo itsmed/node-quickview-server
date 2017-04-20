@@ -1,4 +1,5 @@
 const request = require('supertest');
+const { expect } = require('chai');
 
 describe('/api/employees/all', () => {
   let server;
@@ -40,13 +41,10 @@ describe('/api/employees/all', () => {
       .get('/api/employees/all')
       .set('Accept', 'application/json')
       .set('Authorization', token)
-      .expect(res => {
-        console.log('body: ', res.body);
-        res.body.data = Array.isArray(res.body.data);
+      .then(res => {
+        expect(Array.isArray(res.body)).to.equal(true);
+        done();
       })
-      .expect(200, {
-        data: true
-      }, done);
   });
 
 
@@ -55,11 +53,9 @@ describe('/api/employees/all', () => {
       .get('/api/employees/all')
       .set('Accept', 'application/json')
       .set('Authorization', token)
-      .expect(res => {
-        res.body.data = res.body.data[0].name.last.toLowerCase();
+      .then(res => {
+        expect(res.body[0].name.last.toLowerCase()).to.equal('carroll');
+        done();
       })
-      .expect(200, {
-        data: 'carroll'
-      }, done);
   });
 });

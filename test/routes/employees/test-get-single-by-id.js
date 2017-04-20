@@ -1,4 +1,5 @@
 const request = require('supertest');
+const { expect } = require('chai');
 
 describe('/api/employees/id/:id', () => {
   let server;
@@ -40,12 +41,10 @@ describe('/api/employees/id/:id', () => {
         .get('/api/employees/id/b7e0f1cc-4c4f-487c-9d88-258deee52282')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(res => {
-          res.body.data = res.body.data.name.last.toLowerCase();
-        })
-        .expect(200, {
-          data: 'dillard'
-        }, done);
+        .then(res => {
+          expect(res.body.name.last.toLowerCase()).to.equal('dillard');
+          done();
+        });
   });
 
   it('should return null when passed an unknown id', (done) => {
@@ -53,8 +52,9 @@ describe('/api/employees/id/:id', () => {
         .get('/api/employees/id/58df03977de4c44116c460d5')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(200, {
-          data: null
-        }, done);
+        .then(res => {
+          expect(res.body).to.equal(null);
+          done();
+        })
   });
 });
