@@ -53,7 +53,7 @@ exports.signup = function(req, res, next) {
 };
 
 exports.signin = function(req, res, next) {
-  console.log(req.body);
+  // console.log(req.body);
   const { username, password } = req.body;
 
   AuthenticatedUser.findOne({ username }, (err, existingUser) => {
@@ -84,7 +84,7 @@ exports.signin = function(req, res, next) {
 exports.checkUserToken = function(req, res, next) {
   
   const { authorization } = req.headers;
-  // console.log('trying!', authorization, req.hea);
+  // console.log('trying!', authorization);
   if (!authorization) {
     res.json({ error: 'Unauthorized' });
     return;
@@ -95,6 +95,7 @@ exports.checkUserToken = function(req, res, next) {
     res.json({ error: 'Unauthorized' });
     return;
   }
+  // console.log('\n\nDECODED TOKEN', token, '\n\n');
   if (token.permissions && token.permissions > 0) {
     next();
   }

@@ -1,6 +1,7 @@
 const request = require('supertest');
+const { expect } = require('chai');
 
-describe('/api/users/search/name/:name', () => {
+describe('/api/users/name/:name', () => {
   let server;
   let db;
   let token;
@@ -34,40 +35,34 @@ describe('/api/users/search/name/:name', () => {
     db.close();
     token = null ;
   });
-  
-  it('should return an array of employee records when passed a known name', (done) => {
-      request(server)
-        .get('/api/users/search/name/leonor')
-        .set('Accept', 'application/json')
-        .set('Authorization', token)
-        .expect(res => {
-          res.body.data = res.body.data[0].name.last.toLowerCase();
-        })
-        .expect(200, {
-          data: 'carver'
-        }, done);
-  });
 
-  it('should return an array of employee records when passed a known name', (done) => {
+  it('should return an array when passed a known name', (done) => {
       request(server)
-        .get('/api/users/search/name/carver')
+        .get('/api/users/name/carver')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(res => {
-          res.body.data = res.body.data[0].name.last.toLowerCase();
+        .then(res => {
+          expect(Array.isArray(res.body)).to.equal(true);
+          done();
+        });
+  });
+  
+  it('should return an array of expected employee records when passed a known name', (done) => {
+      request(server)
+        .get('/api/users/name/wong')
+        .set('Accept', 'application/json')
+        .set('Authorization', token)
+        .then(res => {
+          expect(res.body[0].name.first.toLowerCase()).to.equal('cooley');
+          done();
         })
-        .expect(200, {
-          data: 'carver'
-        }, done);
   });
 
   it('should return an empty array when passed an unknown name', (done) => {
       request(server)
-        .get('/api/users/search/name/cyndi')
+        .get('/api/users/name/cyndi')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(200, {
-          data: []
-        }, done);
+        .expect(200, [], done);
   });
 });

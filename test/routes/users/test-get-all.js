@@ -1,4 +1,5 @@
 const request = require('supertest');
+const { expect } = require('chai');
 
 describe('/api/users/all', () => {
   let server;
@@ -19,10 +20,14 @@ describe('/api/users/all', () => {
 
   describe('unauthorized users', () => {
     it('/api/users/all returns an unauthorized message', (done) => {
-      request('api/users/all')
+      request(server)
+        .get('api/users/all')
+        .set('Accept', 'application/json')
+        .set('Authorization', '')
         .expect(200, {
           error: 'Unauthorized'
-        }, done)
+        });
+        done();
     });
   });
 
@@ -53,31 +58,30 @@ describe('/api/users/all', () => {
     });
 
     it('should return a json array', (done) => {
-        
+      let data;
       request(server)
         .get('/api/users/all')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(res => {
-          res.body.data = res === null
-        })
-        .expect(200, {
-          data: false
-        }, done);
+        .then(res => {
+          data = Array.isArray(res.body);
+          expect(data).to.equal(true);
+          done();
+        });
     });
 
 
     it('should return an array of users', function(done) {
+    let data; 
       request(server)
         .get('/api/users/all')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(res => {
-          res.body.data = Array.isArray(res.body.data);
-        })
-        .expect(200, {
-          data: true
-        }, done);
+        .then(res => {
+          data = res.body[0].name.last;
+          expect(data).to.equal('sweeney');
+          done();
+        });
     });
   });
 });

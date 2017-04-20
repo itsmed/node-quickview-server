@@ -1,4 +1,5 @@
 const request = require('supertest');
+const { expect } = require('chai');
 
 describe('/users', () => {
   let server;
@@ -39,15 +40,13 @@ describe('/users', () => {
   describe('/api/users/id/:id', () => {
     it('should return a user record when passed a known userId', (done) => {
       request(server)
-        .get('/api/users/id/7a5704d7-c44a-4795-aa06-a3c7b6218f8b')
+        .get('/api/users/id/cc99e746-c0b6-43bd-8be2-3a948467f1ac')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(res => {
-          res.body.data = res.body.data.name.first.toLowerCase();
-        })
-        .expect(200, {
-          data: 'Michele'.toLowerCase()
-        }, done);
+        .then(res => {
+          expect(res.body.name.last.toLowerCase()).to.equal('wong');
+          done();
+        });
     });
 
     it('should return null when passed an unknown userId', (done) => {
@@ -55,9 +54,7 @@ describe('/users', () => {
         .get('/api/users/id/7a5704d7-c44a-95-aa06-a3c7b6218f8b')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(200, {
-          data: null
-        }, done);
+        .expect(200, null, done);
     });
 
     it('should return null when passed an unkown userId', (done) => {
@@ -65,9 +62,7 @@ describe('/users', () => {
         .get('/api/users/id/82jsl89snfklw')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(200, {
-          data: null
-        }, done);
+        .expect(200, null, done);
     });
   });
 
