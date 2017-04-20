@@ -1,6 +1,7 @@
 const request = require('supertest');
+const { expect } = require('chai');
 
-describe('/api/employees/search/permissions/:permissions', () => {
+describe('/api/employees/permissions/:permissions', () => {
   let server;
   let db;
   let token;
@@ -37,37 +38,31 @@ describe('/api/employees/search/permissions/:permissions', () => {
   
   it('should return an array of employee records when passed a permission', (done) => {
       request(server)
-        .get('/api/employees/search/permissions/7')
+        .get('/api/employees/permissions/7')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(res => {
-          res.body.data = res.body.data[0].name.last.toLowerCase();
-        })
-        .expect(200, {
-          data: 'day'
-        }, done);
+        .then(res => {
+          expect(res.body[0].name.last.toLowerCase()).to.equal('day');
+          done();
+        });
   });
 
   it('should return an array of employees when passed a permission', (done) => {
       request(server)
-        .get('/api/employees/search/permissions/5')
+        .get('/api/employees/permissions/5')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(res => {
-          res.body.data = res.body.data.length
-        })
-        .expect(200, {
-          data: 1 
-        }, done);
+        .then(res => {
+          expect(res.body.length).to.equal(1);
+          done();
+        });
   });
 
   it('should return an empty array if no employees with that persmission are found', (done) => {
     request(server)
-      .get('/api/employees/search/permissions/234')
+      .get('/api/employees/permissions/234')
       .set('Accept', 'application/json')
       .set('Authorization', token)
-      .expect(200, {
-        data: []
-      }, done);
+      .expect(200, [], done);
   });
 });

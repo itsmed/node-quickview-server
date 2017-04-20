@@ -1,6 +1,7 @@
 const request = require('supertest');
+const { expect } = require('chai');
 
-describe('/api/employees/search/email/:email', () => {
+describe('/api/employees/email/:email', () => {
   let server;
   let db;
   let token;
@@ -37,25 +38,23 @@ describe('/api/employees/search/email/:email', () => {
   
   it('should return an array of employee records when passed a known email', (done) => {
       request(server)
-        .get('/api/employees/search/email/acosta.miller@quickview.com')
+        .get('/api/employees/email/page.stuart@quickview.com')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(res => {
-          console.log('res', res.body, res.data);
-          res.body.data = res.body.data[0].name.last.toLowerCase();
-        })
-        .expect(200, {
-          data: 'miller'
-        }, done);
+        .then(res => {
+          expect(res.body[0].name.last.toLowerCase()).to.equal('stuart');
+          done();
+        });
   });
 
   it('should return an empty array when passed an unknown email', (done) => {
       request(server)
-        .get('/api/employees/search/email/kimbereleey')
+        .get('/api/employees/email/kimbereleey')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(200, {
-          data: []
-        }, done);
+        .then(res => {
+          expect(res.body).to.deep.equal([]);
+          done();
+        });
   });
 });

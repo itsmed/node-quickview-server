@@ -1,6 +1,7 @@
 const request = require('supertest');
+const { expect } = require('chai');
 
-describe('/api/employees/search/name/:name', () => {
+describe('/api/employees/name/:name', () => {
   let server;
   let db;
   let token;
@@ -37,24 +38,20 @@ describe('/api/employees/search/name/:name', () => {
   
   it('should return an array of employee records when passed a known name', (done) => {
       request(server)
-        .get('/api/employees/search/name/norris')
+        .get('/api/employees/name/norris')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(res => {
-          res.body.data = res.body.data[0].name.last.toLowerCase();
-        })
-        .expect(200, {
-          data: 'gallagher'
-        }, done);
+        .then(res => {
+          expect(res.body[0].name.last.toLowerCase()).to.equal('gallagher');
+          done();
+        });
   });
 
   it('should return an empty array when passed an unknown name', (done) => {
       request(server)
-        .get('/api/employees/search/name/kimbereleey')
+        .get('/api/employees/name/kimbereleey')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(200, {
-          data: []
-        }, done);
+        .expect(200, [], done);
   });
 });
