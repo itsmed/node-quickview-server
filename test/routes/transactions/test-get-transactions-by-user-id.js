@@ -1,6 +1,7 @@
 const request = require('supertest');
+const { expect } = require('chai');
 
-describe('/api/transactions/user/id/:id', () => {
+describe('/api/transactions/user_id/:id', () => {
   let server;
   let db;
   let token;
@@ -37,24 +38,21 @@ describe('/api/transactions/user/id/:id', () => {
   
   it('should return a list of transactions when passed a known id', (done) => {
       request(server)
-        .get('/api/transactions/user/id/7a5704d7-c44a-4795-aa06-a3c7b6218f8b')
+        .get('/api/transactions/user_id/7a5704d7-c44a-4795-aa06-a3c7b6218f8b')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(res => {
-          res.body.data = Array.isArray(res.body.data)
-        })
-        .expect(200, {
-          data: true
-        }, done);
+        .then(res => {
+          expect(Array.isArray(res.body)).to.equal(true)
+          expect(res.body[0].amount).to.equal(326.42);
+          done();
+        });
   });
 
   it('should return an empty array when passed an unknown id', (done) => {
       request(server)
-        .get('/api/transactions/user/id/58d58096db7fd098f3865631')
+        .get('/api/transactions/user_id/58d58096db7fd098f3865631')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(200, {
-          data: []
-        }, done);
+        .expect(200, [], done);
   });
 });

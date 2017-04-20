@@ -1,4 +1,5 @@
 const request = require('supertest');
+const { expect } = require('chai');
 
 describe('/api/transactions/id/:id', () => {
   let server;
@@ -40,12 +41,10 @@ describe('/api/transactions/id/:id', () => {
         .get('/api/transactions/id/58d5809670ae528a0d07f505')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(res => {
-          res.body.data = res.body.data.user_id
-        })
-        .expect(200, {
-          data: '616cb4d5-55b1-47f5-93a4-6e6f269abe64'
-        }, done);
+        .then(res => {
+          expect(res.body.user_id).to.equal('616cb4d5-55b1-47f5-93a4-6e6f269abe64')
+          done();
+        });
   });
 
   it('should return null when passed an unknown id', (done) => {
@@ -53,8 +52,6 @@ describe('/api/transactions/id/:id', () => {
         .get('/api/transactions/id/58df03977de4c44116c460d5')
         .set('Accept', 'application/json')
         .set('Authorization', token)
-        .expect(200, {
-          data: null
-        }, done);
+        .expect(200, null, done);
   });
 });
