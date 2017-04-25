@@ -4,7 +4,8 @@ const Employee = require('../../db/employee/employee-schema');
 
 module.exports = function createNewEmployee(req, res) {
   const { permissions, name, picture, isActive } = req.body.new_employee;
-  let employee = {
+  const email = name.first.concat(name.last, '@quickview.com');
+  const employee = {
     empId: randId(),
     index: Math.floor(Math.random() * 30) + 20,
     isActive,
@@ -14,9 +15,21 @@ module.exports = function createNewEmployee(req, res) {
     },
     picture,
     permissions,
-    email: name.first.concat(name.last, '@quickview.com'),
+    email,
     company: 'quickview'
   }
+
+  Employee.findOne({ email }, (err, docs) => {
+    if (err) {
+      throw err;
+      // @TODO: REAL ERROR HANDLING
+    }
+    if (docs) {
+      return res.json({message: 'Employee already exists!'});
+    }
+
+    const e = new Employee(employee);
+  });
 };
 
 
